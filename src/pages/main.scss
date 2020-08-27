@@ -1,2 +1,22 @@
 @import "../Utils_Scss/mixins";
 @import "../Utils_Scss/vars";
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: $MyGrey;
+}
+.container-color-type{
+  width: 1440px;
+  background-color: $MyWhite;
+  box-sizing: border-box;
+  margin: 20px auto;
+  .container-logo{
+    padding-top: 30px;
+    padding-left: 30px;
+  }
+}
+
+@import "../include_Blocks/Logo_Container";
