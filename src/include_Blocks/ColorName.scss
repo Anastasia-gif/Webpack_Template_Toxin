@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: 70px 159px;
   grid-column-gap: 40px;
-  grid-template-rows: 70px;
+  grid-template-rows: repeat(7,70px);
   grid-row-gap: 20px;
 }
 .color__rectangle{
