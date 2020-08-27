@@ -1,0 +1,55 @@
+@import "../Utils_Scss/mixins";
+@import "../Utils_Scss/vars";
+.tags-description{
+  display: grid;
+  grid-template-columns: 37px 336px;
+  grid-column-gap: 30px;
+  grid-template-rows: 60px 48px 15px 48px;
+  grid-row-gap: 50px;
+}
+.tags__name{
+  @include Montserrat-normal;
+  color: rgba($DarkShade,0.25);
+  justify-self: end;
+}
+.tag-h1{
+  font-size: 24px;
+  line-height: 29px;
+}
+.tag-h2{
+  font-size: 19px;
+  line-height: 23px;
+}
+.tag-h3{
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+.tag-body{
+  font-size: 14px;
+  line-height: 24px;
+}
+.tags__description{
+  @include Quicksand-bold;
+  color: $DarkShade;
+}
+.description-tag-h1{
+  font-size: 24px;
+  line-height: 30px;
+}
+.description-tag-h2{
+  font-size: 19px;
+  line-height: 24px;
+}
+.description-tag-h3{
+  @include Montserrat-bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+.description-tag-body{
+  @include Montserrat-normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba($DarkShade,0.75);
+}

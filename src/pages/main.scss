@@ -13,4 +13,10 @@ body{
   background-color: $MyWhite;
   box-sizing: border-box;
   margin: 20px auto;
+  .tags-description{
+    padding-left: 847px;
+    padding-top: 145px;
+  }
 }
+
+@import "../include_Blocks/TagsDescription";
