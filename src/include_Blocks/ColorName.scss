@@ -1,0 +1,44 @@
+@import "../Utils_Scss/vars";
+@import "../Utils_Scss/mixins";
+
+.color-name{
+  display: grid;
+  grid-template-columns: 70px 159px;
+  grid-column-gap: 40px;
+  grid-template-rows: 70px;
+  grid-row-gap: 20px;
+}
+.color__rectangle{
+  border-radius: 6px;
+}
+.rectangle-1{
+  background-color: $DarkShade;
+}
+.rectangle-2{
+  background-color: rgba($DarkShade,0.75);
+}
+.rectangle-3{
+  background-color: rgba($DarkShade,0.50);
+}
+.rectangle-4{
+  background-color: rgba($DarkShade,0.25);
+}
+.rectangle-5{
+  background-color: rgba($DarkShade,0.05);
+}
+.rectangle-6{
+  background-color: $Purple;
+}
+.rectangle-7{
+  background-color: $Green;
+}
+.color__name{
+  @include Quicksand-bold;
+  font-size: 19px;
+  line-height: 29px;
+  color: $DarkShade;
+  align-self: center;
+  span{
+    @include Quicksand-lighter;
+  }
+}
