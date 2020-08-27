@@ -8,3 +8,9 @@
 body{
   background-color: $MyGrey;
 }
+.container-color-type{
+  width: 1440px;
+  background-color: $MyWhite;
+  box-sizing: border-box;
+  margin: 20px auto;
+}
