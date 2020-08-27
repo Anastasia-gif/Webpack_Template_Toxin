@@ -5,10 +5,14 @@
   margin: 0;
   padding: 0;
 }
+body{
+  background-color: $MyGrey;
+}
 .container-color-type{
   width: 1440px;
   background-color: $MyWhite;
   box-sizing: border-box;
+  margin: 20px auto;
   .color-name{
     padding-left: 150px;
     padding-top: 145px;
