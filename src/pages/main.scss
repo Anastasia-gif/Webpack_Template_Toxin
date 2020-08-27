@@ -1,2 +1,18 @@
 @import "../Utils_Scss/mixins";
 @import "../Utils_Scss/vars";
+
+*{
+  margin: 0;
+  padding: 0;
+}
+.container-color-type{
+  width: 1440px;
+  background-color: $MyWhite;
+  box-sizing: border-box;
+  .color-name{
+    padding-left: 150px;
+    padding-top: 145px;
+  }
+}
+
+@import "../include_Blocks/ColorName";
