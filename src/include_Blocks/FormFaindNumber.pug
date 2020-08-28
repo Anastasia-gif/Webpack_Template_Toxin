@@ -1,0 +1,31 @@
+form.search-form.grid-form
+    h1.search-form__header.header-find-number
+        | Найдём номера под
+        br
+        | ваши пожелания
+    label.search-form__label.label-arrival
+        | прибытие
+    input.search-form__input.input-arrival(
+         type = "text"
+         name = "arrival"
+         id = "arrival"
+         placeholder = "ДД.ММ.ГГГГ"
+         )
+    label.search-form__label.label-departure
+         | выезд
+    input.search-form__input.input-departure(
+         type = "text"
+         name = "departure"
+         id = "departure"
+         placeholder = "ДД.ММ.ГГГГ"
+         )
+    label.search-form__label.label-guests
+         | гости
+    input.search-form__input.input-guests(
+         type = "text"
+         name = "guests"
+         id = "guests"
+         placeholder = "Сколько гостей"
+         )
+    button.search-form__button.button-find-number
+         | Подобрать номер

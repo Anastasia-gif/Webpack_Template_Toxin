@@ -1,0 +1,88 @@
+@import "../Utils_Scss/vars";
+@import "../Utils_Scss/mixins";
+
+.header-find-number{
+  grid-area: header;
+}
+.label-arrival{
+  grid-area: label-arrival;
+}
+.input-arrival{
+  grid-area: input-arrival;
+  width: ($WidthField - 20px)/2;
+}
+.label-departure{
+  grid-area: label-departure;
+}
+.input-departure{
+  grid-area: input-departure;
+  width: ($WidthField - 20px)/2;
+}
+.label-guests{
+  grid-area: label-guests;
+}
+.input-guests{
+  grid-area: input-guests ;
+  width: $WidthField;
+}
+.button-find-number{
+  grid-area: button-find-number;
+}
+.grid-form{
+  display: grid;
+  grid-template-columns: 150px 20px 150px;
+  grid-template-rows: 60px 20px 15px 6px 44px 21px 15px 5px 44px 31px 44px;
+  grid-template-areas: "header header header"
+                       ". . ."
+                       "label-arrival . label-departure"
+                       ". . ."
+                       "input-arrival . input-departure"
+                       ". . ."
+                       "label-guests . ."
+                       ". . ."
+                       "input-guests input-guests input-guests"
+                       ". . ."
+                       "button-find-number button-find-number button-find-number"
+}
+.search-form__header{
+  @include Quicksand-bold;
+  color: $DarkShade;
+  line-height: 30px;
+}
+.header-find-number{
+  font-size: 24px;
+}
+.search-form__label{
+  @include Montserrat-bold;
+  color: $DarkShade;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 15px;
+}
+.search-form__input{
+  background: $MyWhite;
+  border: 1px solid rgba($DarkShade,0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 15px;
+  @include Montserrat-normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba($DarkShade,0.25);
+  height: $Height;
+}
+.search-form__button{
+  background: linear-gradient(180deg, $Purple 0%, $Green 100%);
+  border-radius: 22px;
+  width: $WidthField;
+  height: $Height;
+  @include Montserrat-bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $MyWhite;
+  border: none;
+}
+.header-find-number{
+  letter-spacing: 1.3px;
+}
