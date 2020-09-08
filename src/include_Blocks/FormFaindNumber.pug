@@ -1,31 +1,80 @@
-form.search-form.grid-form
-    h1.search-form__header.header-find-number
-        | Найдём номера под
-        br
-        | ваши пожелания
-    label.search-form__label.label-arrival
-        | прибытие
-    input.search-form__input.input-arrival(
-         type = "text"
-         name = "arrival"
-         id = "arrival"
-         placeholder = "ДД.ММ.ГГГГ"
-         )
-    label.search-form__label.label-departure
-         | выезд
-    input.search-form__input.input-departure(
-         type = "text"
-         name = "departure"
-         id = "departure"
-         placeholder = "ДД.ММ.ГГГГ"
-         )
-    label.search-form__label.label-guests
-         | гости
-    input.search-form__input.input-guests(
-         type = "text"
-         name = "guests"
-         id = "guests"
-         placeholder = "Сколько гостей"
-         )
-    button.search-form__button.button-find-number
-         | Подобрать номер
+form.search-form#findNumber
+    .grid-form
+        h1.search-form__header.header-find-number
+          | Найдём номера под
+          br
+          | ваши пожелания
+        label.search-form__label.label-arrival(
+            for="arrival"
+            )
+            | прибытие
+        input.search-form__input.input-arrival.input-date(
+            type = "text"
+            name = "arrival"
+            id = "arrival"
+            placeholder = "ДД.ММ.ГГГГ"
+            autocomplete = "off"
+            )
+        label.search-form__label.label-departure(
+             for="departure"
+             )
+            | выезд
+        input.search-form__input.input-departure.input-date(
+            type = "text"
+            name = "departure"
+            id = "departure"
+            placeholder = "ДД.ММ.ГГГГ"
+            value=""
+            )
+        label.search-form__label.label-guests(
+              for="guests"
+              )
+             | гости
+        input.search-form__input.input-guests(
+             type = "text"
+             name = "guests"
+             id = "guests"
+             placeholder = "Сколько гостей"
+             value=""
+             )
+        input.search-form__input-submit(
+            type = "button"
+            id="buttonGuests"
+             )
+        button.search-form__button.button-find-number(
+            type = "submit"
+            form = "findNumber"
+            )
+            | Подобрать номер
+
+    .block-guests.style-blocks-guests
+        .block-guests__grid
+            .block-guests__age-category.adults
+                | Взрослые
+            .block-guests__background.minus-adults.background-minus
+            input.block-guests__input-number-guests.number-adults(
+                type = "text"
+                value = "0"
+                name = "number-adults"
+                )
+            .block-guests__background.plus-adults.background-plus
+            .block-guests__age-category.children
+                | Дети
+            .block-guests__background.minus-children.background-minus
+            input.block-guests__input-number-guests.number-children(
+                type = "text"
+                value = "0"
+                name = "number-children"
+                )
+            .block-guests__background.plus-children.background-plus
+            .block-guests__age-category.babies
+               | Младенцы
+            .block-guests__background.minus-babies.background-minus
+            input.block-guests__input-number-guests.number-babies(
+                type = "text"
+                value = "0"
+                name = "number-babies"
+                )
+            .block-guests__background.plus-babies.background-plus
+            .block-guests__button.button-apple
+                |Применить

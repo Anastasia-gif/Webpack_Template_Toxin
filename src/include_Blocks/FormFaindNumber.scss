@@ -1,8 +1,52 @@
 @import "../Utils_Scss/vars";
 @import "../Utils_Scss/mixins";
 
+.search-form{
+  height: 300px;
+}
+.search-form__header{
+  @include Quicksand-bold;
+  color: $DarkShade;
+  line-height: 30px;
+  font-size: 24px;
+}
 .header-find-number{
   grid-area: header;
+  letter-spacing: 1.3px;
+}
+.search-form__label{
+  @include Montserrat-bold;
+  color: $DarkShade;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 15px;
+}
+.search-form__input{
+  background: $MyWhite;
+  border: 1px solid rgba($DarkShade,0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 15px;
+  @include Montserrat-normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba($DarkShade,0.75);
+  height: $Height;
+}
+.background-arrow-dawn{
+  background-image: url("/assets/img/ArrowDown.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 44px;
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+.wrapper-search-form-input-guests{
+  grid-area: input-guests ;
+  width: $WidthField;
+  height: $Height + 159px;
+  box-sizing: border-box;
 }
 .label-arrival{
   grid-area: label-arrival;
@@ -22,16 +66,15 @@
   grid-area: label-guests;
 }
 .input-guests{
-  grid-area: input-guests ;
-  width: $WidthField;
+  grid-area: input-guests;
 }
 .button-find-number{
-  grid-area: button-find-number;
+  grid-area: button-guests;
 }
 .grid-form{
   display: grid;
   grid-template-columns: 150px 20px 150px;
-  grid-template-rows: 60px 20px 15px 6px 44px 21px 15px 5px 44px 31px 44px;
+  grid-template-rows: 60px 20px 15px 6px 44px 21px 20px 44px 31px 44px;
   grid-template-areas: "header header header"
                        ". . ."
                        "label-arrival . label-departure"
@@ -39,40 +82,129 @@
                        "input-arrival . input-departure"
                        ". . ."
                        "label-guests . ."
+                       "input-guests input-guests  input-guests"
                        ". . ."
-                       "input-guests input-guests input-guests"
-                       ". . ."
-                       "button-find-number button-find-number button-find-number"
+                       "button-guests button-guests button-guests";
 }
-.search-form__header{
-  @include Quicksand-bold;
-  color: $DarkShade;
-  line-height: 30px;
+.block-guests{
+  position: relative;
+  top: -76px;
+  display: none;
+  cursor: pointer;
 }
-.header-find-number{
-  font-size: 24px;
+.style-blocks-guests{
+  background-color: $MyWhite;
+  z-index: 1;
+  border: 1px solid rgba($DarkShade,0.5);
+  box-sizing: border-box;
+  box-shadow: 0 10px 20px rgba($DarkShade,0.05);
+  width: 320px;
+  height: 159px;
+  padding-top: 7px;
+  padding-left: 15px;
 }
-.search-form__label{
+.adults{
+  grid-area: aduils;
+}
+.minus-adults{
+  grid-area:  adults-minus;
+}
+.number-adults{
+  grid-area: number-adults;
+}
+.plus-adults{
+  grid-area: adults-plus;
+}
+.children{
+  grid-area: children;
+}
+.minus-children{
+  grid-area: children-minus;
+}
+.number-children{
+  grid-area: number-children;
+}
+.plus-children{
+  grid-area: children-plus;
+}
+.babies{
+  grid-area: babies;
+}
+.minus-babies{
+  grid-area: babies-minus ;
+}
+.number-babies{
+  grid-area: number-babies;
+}
+.plus-babies{
+  grid-area: babies-plus;
+}
+.button-apple{
+  grid-area: button-apple;
+  justify-self: end;
+
+}
+.block-guests__grid{
+  display: grid;
+  grid-template-columns: 83px 123px 30px 10px 12px 10px 30px;
+  grid-template-rows: 27px 7px 30px 7px 30px  21px 15px ;
+  grid-template-areas: "aduils . adults-minus . number-adults . adults-plus"
+                        ". . . . . . ."
+                       "children . children-minus . number-children . children-plus"
+                       ". . . .  . . ."
+                       "babies . babies-minus . number-babies . babies-plus"
+                       ". . . . . . ."
+                       ". .  button-apple button-apple button-apple button-apple button-apple";
+}
+.block-guests__age-category{
+  align-self: center;
+}
+.background-minus{
+  background-image: url("/assets/img/background-minus.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30px;
+  width: 30px;
+}
+.background-plus{
+  background-image: url("/assets/img/background-plus.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30px;
+  width: 30px;
+}
+.block-guests__age-category{
   @include Montserrat-bold;
-  color: $DarkShade;
-  text-transform: uppercase;
   font-size: 12px;
   line-height: 15px;
+  text-transform: uppercase;
+  color: $DarkShade;
 }
-.search-form__input{
-  background: $MyWhite;
-  border: 1px solid rgba($DarkShade,0.25);
+
+.block-guests__input-number-guests{
+  height: 20px;
+  padding-left: 3px;
   box-sizing: border-box;
-  border-radius: 4px;
-  padding-left: 15px;
-  @include Montserrat-normal;
-  font-size: 14px;
-  line-height: 18px;
-  color: rgba($DarkShade,0.25);
-  height: $Height;
+  align-self: center;
+  @include Montserrat-bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $DarkShade;
+  border: none;
+  cursor: pointer;
+}
+.search-form__input-submit{
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: url("/assets/img/ArrowDown.png") no-repeat 50% 50%;
+  position: relative;
+  top: 126px ;
+  left: 106px;
 }
 .search-form__button{
-  background: linear-gradient(180deg, $Purple 0%, $Green 100%);
+  background: url("/assets/img/arrow_forward_batton.png") no-repeat 288px ,linear-gradient(180deg, $Purple 0%, $Green 100%) ;
   border-radius: 22px;
   width: $WidthField;
   height: $Height;
@@ -83,6 +215,26 @@
   color: $MyWhite;
   border: none;
 }
-.header-find-number{
-  letter-spacing: 1.3px;
+.block-guests__button{
+  @include Montserrat-bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $Purple;
+  border: none;
+  cursor: pointer;
+}
+.input-guests-active{
+  border: 1px solid rgba($DarkShade,0.5);
+  border-bottom: 1px solid rgba($DarkShade,0.25);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.block-guests-active{
+  border-left: 1px solid rgba($DarkShade,0.5);
+  border-top: 1px solid rgba($DarkShade,0.25);
+  border-right: 1px solid rgba($DarkShade,0.5);
+  border-bottom: 1px solid rgba($DarkShade,0.25);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }

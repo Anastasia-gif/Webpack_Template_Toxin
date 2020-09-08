@@ -1,0 +1,193 @@
+@import "../Utils_Scss/vars";
+@import "../Utils_Scss/mixins";
+
+
+.ui-datepicker {
+  width: 320px;
+  height: 369px;
+  padding: 20px;
+  background: $MyWhite;
+  box-sizing: border-box;
+  border: 1px solid rgba($DarkShade,0.25);
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba($DarkShade,0.05);
+  display: none;
+}
+
+.ui-datepicker a {
+  text-decoration: none;
+}
+.ui-datepicker table {
+  width: 100%;
+  height: 240px;
+  position: relative;
+  top: 22px;
+}
+.ui-datepicker tbody tr a
+{
+  @include Montserrat-normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: rgba($DarkShade,0.5);
+}
+.ui-datepicker-header{
+  line-height: 24px;
+  @include Quicksand-bold;
+  font-size: 19px;
+  color: $DarkShade;
+}
+.ui-datepicker-title {
+  text-align: center;
+  margin-top: -30px;
+  letter-spacing: 1px;
+}
+.ui-datepicker-prev {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  cursor: pointer;
+  background-image: url('/assets/img/arrow_back.png');
+  background-repeat: no-repeat;
+  line-height: 600%;
+  overflow: hidden;
+}
+.ui-datepicker-trigger{
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  position: relative;
+  top: 59px;
+  left: calc(100% - 30px);
+}
+.ui-datepicker-trigger {
+  #arrival + &{
+    position: relative;
+    top: 59px;
+    left: calc(100% - 29px);
+  }
+  #departure + &{
+    position: relative;
+    top: 59px;
+    left: calc(100% - (-121px));
+  }
+}
+.position-button-departure{
+  position: relative;
+  top: 59px;
+  left: calc(100% - 90px);
+}
+.ui-datepicker-next {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  cursor: pointer;
+  background-image: url('/assets/img/arrow_forward.png');
+  background-repeat: no-repeat;
+  line-height: 600%;
+  overflow: hidden;
+}
+.ui-datepicker-prev {
+  position: relative;
+  left: -1px;
+  top: 2px;
+  background-position: center 0px;
+}
+.ui-datepicker-next {
+  position: relative;
+  left: 230px;
+  top: 2px;
+  background-position: center 0px;
+}
+.ui-datepicker th{
+  @include Montserrat-bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $Purple;
+  margin-top: 28px;
+}
+
+.ui-datepicker tbody tr{
+  text-align: center;
+  width: 40px;
+  height: 40px;
+}
+.ui-datepicker tbody tr:nth-child(2){
+  position: relative;
+  top: -3px;
+}
+.ui-datepicker tbody tr td:hover{
+  background: $Green;
+  border-radius: 22px;
+  a{
+    color: $MyWhite;
+  }
+}
+.ui-datepicker tbody tr td:active{
+  background: $Purple;
+  border-radius: 22px;
+  a{
+    color: $MyWhite;
+  }
+}
+.ui-datepicker thead tr th{
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 6px;
+  left: 1px;
+}
+.ui-datepicker-current{
+  display: none;
+}
+.ui-datepicker-close{
+  display: none;
+}
+.ui-datepicker-buttonpane{
+  position: relative;
+  top: 33px;
+  left: -4px;
+}
+.ui-datepicker-clear{
+  width: 72px;
+  height: 15px;
+  padding: 0;
+  @include Montserrat-bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: rgba($DarkShade,0.5);
+  cursor: pointer;
+  border: none;
+  background: $MyWhite;
+}
+.ui-datepicker-clear:hover{
+  color: $Purple;
+}
+.ui-datepicker-clear::-moz-focus-inner{
+  padding: 0;
+  border: 0;
+}
+.ui-datepicker-clear:active{
+   color: $Purple;
+}
+.ui-datepicker-apply{
+  position: relative;
+  left: 124px;
+  width: 84px;
+  height: 15px;
+  padding: 0;
+  @include Montserrat-bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color:rgba($DarkShade,0.5);
+  cursor: pointer;
+  border: none;
+  background: $MyWhite;
+}
+.ui-datepicker-apply:hover{
+  color: $Purple;
+}
+

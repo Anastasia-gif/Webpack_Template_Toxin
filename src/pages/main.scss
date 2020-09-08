@@ -24,9 +24,10 @@ body{
   box-sizing: border-box;
   border-radius: 4px;
   box-shadow: 0 0 25px rgba($MyBlack,0.02);
-  position: absolute;
+  position: relative;
   top: 150px;
   left: 140px;
 }
 
 @import "../include_Blocks/FormFaindNumber";
+@import "../include_Blocks/Calendar";
