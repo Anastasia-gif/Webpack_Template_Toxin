@@ -6,5 +6,9 @@
   padding: 0;
 }
 body{
-  background-color: $MyGrey;
+background: rgba($MyBlack,0.2);
+}
+.wrapper{
+  max-width: 1440px;
+  margin: 20px auto 0;
 }

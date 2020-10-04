@@ -1,7 +1,7 @@
 {
   "name": "webpacktemplate",
   "version": "1.0.0",
-  "description": "My template + pug",
+  "description": "Hotel-Toxin-Ui-Kit",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
@@ -11,13 +11,10 @@
     "> 1%",
     "last 3 version"
   ],
-  "author": "https://github.com/vedees",
+  "author": "https://github.com/Anastasia-gif",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vedees/webpack-template-pug.git"
-  },
-  "bugs": {
-    "url": "https://github.com/vedees/webpack-template-pug/issues"
+    "url": "https://github.com/Anastasia-gif/Webpack_Template_Toxin/tree/master"
   },
   "keywords": [
     "webpack",
@@ -27,7 +24,7 @@
     "bable7",
     "scss",
     "pug",
-    "vue"
+    "jquery"
   ],
   "license": "MIT",
   "devDependencies": {
@@ -57,7 +54,6 @@
   "dependencies": {
     "jquery": "^3.5.1",
     "jquery-ui": "^1.12.1",
-    "lodash": "^4.17.20",
-    "vue": "^2.6.10"
+    "lodash": "^4.17.20"
   }
 }

@@ -1,39 +1,3 @@
 @import "src/Utils_Scss/fonts";
 @import "src/Utils_Scss/vars";
 
-@mixin Quicksand-normal{
-  font-family: $Quick;
-  font-style: normal;
-  font-weight: normal;
-  margin: 0;
-}
-@mixin Montserrat-normal{
-  font-family: $Mons;
-  font-style: normal;
-  font-weight: normal;
-  margin: 0;
-}
-@mixin Quicksand-bold{
-  font-family: $Quick;
-  font-style: normal;
-  font-weight: bold;
-  margin: 0;
-}
-@mixin Montserrat-bold{
-  font-family: $Mons;
-  font-style: normal;
-  font-weight: bold;
-  margin: 0;
-}
-@mixin Quicksand-lighter{
-  font-family: $Quick;
-  font-style: normal;
-  font-weight: lighter;
-  margin: 0;
-}
-@mixin Montserrat-lighter{
-  font-family: $Mons;
-  font-style: normal;
-  font-weight: lighter;
-  margin: 0;
-}
