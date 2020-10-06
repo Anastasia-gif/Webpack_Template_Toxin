@@ -1,3 +1,34 @@
 @import "src/Utils_Scss/fonts";
 @import "src/Utils_Scss/vars";
 
+@mixin Style-Wrapper($Height,$Background){
+  width: 1440px;
+  height: $Height;
+  background: $Background;
+}
+@mixin Grid($ColumnGap,$RowGap){
+  display: grid;
+  grid-column-gap: $ColumnGap;
+  grid-row-gap: $RowGap;
+}
+@mixin FontFamily($FontFamily,$FontWeight,$FontSize,$LineHeight){
+  font-family: $FontFamily;
+  font-style: normal;
+  font-weight: $FontWeight;
+  font-size: $FontSize;
+  line-height: $LineHeight;
+}
+@mixin InputStyle($WidthField,$HeightField,$BorderColor,$BorderRadius){
+  background: $MyWhite;
+  width: $WidthField;
+  height: $HeightField;
+  border: 1px solid rgba($BorderColor);
+  box-sizing: border-box;
+  border-radius: $BorderRadius;
+}
+@mixin ButtonStyle($WidthButton,$HeightButton,$BorderRadius){
+  width: $WidthButton;
+  height: $HeightButton;
+  background: linear-gradient(180deg,#BC9CFF 0%, #8BA4F9 100%);
+  border-radius: $BorderRadius;
+}
