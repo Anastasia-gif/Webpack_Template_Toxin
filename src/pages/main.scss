@@ -8,3 +8,7 @@
 body{
 background: rgba($MyBlack,0.2);
 }
+.wrapper{
+  @include Style-Wrapper(900px,$MyWhite); //Аргументы (height,background);
+
+}
