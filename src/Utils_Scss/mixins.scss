@@ -32,3 +32,9 @@
   background: linear-gradient(180deg,#BC9CFF 0%, #8BA4F9 100%);
   border-radius: $BorderRadius;
 }
+@mixin BackgroundImage($Url){
+  background-image: url($Url);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
