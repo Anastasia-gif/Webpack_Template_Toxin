@@ -6,5 +6,7 @@
   height: (48 - $Height) + $Height;
 }
  .block-main-logo__container{
+   @include BackgroundImage(inherit);
+   background-image: url("/assets/img/LogoContainer.png");
 
  }
