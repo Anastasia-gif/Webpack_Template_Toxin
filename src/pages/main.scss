@@ -11,8 +11,8 @@ background: rgba($MyBlack,0.2);
 .wrapper{
   @include Style-Wrapper(900px,$MyWhite); //Аргументы (height,background);
   .block-main-logo{
-    padding-left: $Padding;
-    padding-top: $Padding;
+    padding-left: $PaddingMainLogo;
+    padding-top: $PaddingMainLogo;
   }
 }
 

@@ -2,8 +2,8 @@
  @import "../Utils_Scss/mixins";
 
 .block-main-logo{
-  width:( 48 - $Width) + $Width;
-  height: (48 - $Height) + $Height;
+  width: $WidthMainLogo;
+  height:  $HeightMainLogo;
 }
  .block-main-logo__container{
    @include BackgroundImage(inherit);
