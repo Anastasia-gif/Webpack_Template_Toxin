@@ -1,41 +1,40 @@
 @import "src/Utils_Scss/fonts";
 @import "src/Utils_Scss/vars";
 
-@mixin Style-Wrapper($Height,$Background){
-  width: 1440px;
-  height: $Height;
-  background: $Background;
-  margin: 20px auto 20px;
+@mixin styleSearchForm($heightForm){
+  width: $widthForm;
+  height: $heightForm;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: $borderRadiusDefault;
+  background-color: $myWhite;
+  box-shadow: 0 0 25px rgba($myBlack,0.2);
 }
-@mixin Grid($ColumnGap,$RowGap){
-  display: grid;
-  grid-column-gap: $ColumnGap;
-  grid-row-gap: $RowGap;
-}
-@mixin FontFamily($FontFamily,$FontWeight,$FontSize,$LineHeight){
-  font-family: $FontFamily;
+@mixin fontStyle($fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor){
+  font-family: $fontFamily;
   font-style: normal;
-  font-weight: $FontWeight;
-  font-size: $FontSize;
-  line-height: $LineHeight;
+  font-weight: $fontWeight;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  color: $fontColor;
 }
-@mixin InputStyle($WidthField,$HeightField,$BorderColor,$BorderRadius){
-  background: $MyWhite;
-  width: $WidthField;
-  height: $HeightField;
-  border: 1px solid rgba($BorderColor);
-  box-sizing: border-box;
-  border-radius: $BorderRadius;
+@mixin inputStyle($width){
+  width: $width;
+  height: $fieldsHeight;
+  background-color: $myWhite;
+  border: 1px solid rgba(31,32,65,0.25);
+  border-radius: $borderRadiusDefault;
 }
-@mixin ButtonStyle($WidthButton,$HeightButton,$BorderRadius){
-  width: $WidthButton;
-  height: $HeightButton;
-  background: linear-gradient(180deg,#BC9CFF 0%, #8BA4F9 100%);
-  border-radius: $BorderRadius;
+@mixin buttonStyle($width){
+  background: linear-gradient(180deg,$purple 0,$green 100%) center ;
+  border-radius: $borderRadiusButton;
+  width: $width;
+  height: $fieldsHeight;
 }
-@mixin BackgroundImage($HeightImage){
-  height: $HeightImage;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+@mixin backgroundArrowButton{
+  background: url("/assets/img/arrow_forward_batton.png") no-repeat calc(100% - 15px) calc(100% - 22px);
+  height: $fieldsHeight;
+  width: 44px;
+}
+@mixin backgroundArrowDawn(){
+  background: $myWhite url("/assets/img/ArrowDaun.png") no-repeat  calc(100% - 15px) center ;
 }
