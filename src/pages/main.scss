@@ -6,18 +6,5 @@
   padding: 0;
 }
 body{
-  background: rgba($myBlack,0.1);
+background: rgba($MyBlack,0.2);
 }
-.wrapper{
-  width: 1440px;
-  margin: 20px auto;
-}
-.wrapper-cards{
-  height: 1350px;
-  background-color: rgba($myWhite,0.6);
-  .block-main-logo{
-    padding-top: $paddingLogo;
-    padding-left: $paddingLogo;
-  }
-}
-@import "../Include_Block/LogoContainer";
