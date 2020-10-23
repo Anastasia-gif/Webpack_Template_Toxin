@@ -1,10 +1,13 @@
-.block-form.form-find-number
-    form.search-form.search-form-find-number
+.block-form.block-number-lux
+    form.search-form.search-form-number-lux
         header.search-form__header
             h1.search-form__header__h1
-                |Найдём номера под
-                br
-                |ваши пожелания
+                |№
+                span 888
+                span lux
+                p
+                    | 9 990₽
+                span в сутки
         main.search-form__container
             section.search-form__container-date
                 label.search-form__label
@@ -12,7 +15,7 @@
                     input.search-form__input.datepicker-here(
                         type = "text"
                         placeholder = "ДД.ММ.ГГГГ"
-                        id = "arrival"
+                        id = "arrivalLux"
                         data-range = "true"
                         data-multiple-dates-separator=" - "
                         name = "fieldArrival"
@@ -22,7 +25,7 @@
                     input.search-form__input.datepicker-here(
                         type = "text"
                         placeholder = "ДД.ММ.ГГГГ"
-                        id = "departure"
+                        id = "departureLux"
                         name = "fieldDeparture"
                     )
             section.search-form__container-guests
@@ -38,5 +41,3 @@
             button.search-form__button
                 span Подобрать номер
                 img(src="/assets/img/arrow_forward_batton.png")
-
-

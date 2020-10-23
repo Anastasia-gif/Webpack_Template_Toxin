@@ -1,0 +1,6 @@
+@import "../Utils_Scss/mixins.scss";
+@import "../Utils_Scss/vars.scss";
+
+.search-form-number-lux{
+  @include styleSearchForm($heightFormNumberLux);
+}

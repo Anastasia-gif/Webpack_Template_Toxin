@@ -12,18 +12,17 @@ body{
 .wrapper{
   width: 1440px;
   margin: 20px auto;
+  padding: 30px;
+  display: flex;
 }
 .wrapper-cards{
   height: 1350px;
   background-color: rgba($myWhite,0.6);
-  .block-main-logo{
-    padding-top: $paddingLogo;
-    padding-left: $paddingLogo;
-  }
   .block-form{
-    padding-top: 150px;
-    padding-left: 140px;
+    padding-top:  120px;
+    padding-left: 110px;
   }
 }
 @import "../Include_Block/LogoContainer";
 @import "../Include_Block/Find_Number";
+@import "../Include_Block/NumberLux";

@@ -2,8 +2,10 @@
 @import "../Utils_Scss/vars.scss";
 
 .search-form{
-  @include styleSearchForm($heightFormFindNumber);   // аргументы $heightForm
   padding: $paddingFormTop $paddingFormLeft;
+}
+.search-form-find-number{
+  @include styleSearchForm($heightFormFindNumber);   // аргументы $heightForm
 }
 .search-form__header{
   height: $heightBlock;
