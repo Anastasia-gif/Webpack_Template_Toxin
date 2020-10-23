@@ -1,0 +1,62 @@
+@import "../Utils_Scss/mixins.scss";
+@import "../Utils_Scss/vars.scss";
+
+.search-form{
+  @include styleSearchForm($heightFormFindNumber);   // аргументы $heightForm
+  padding: $paddingFormTop $paddingFormLeft;
+}
+.search-form__header{
+  height: $heightBlock;
+  width: $widthBlock;
+}
+.search-form__header__h1{
+  @include fontStyle($quick,bold,$fontSizeHeader,$lineHeight,$darkShade) //аргументы ( $fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
+}
+.search-form__container{
+  height: $heightBlock + 69px;
+  width: $widthBlock;
+}
+.search-form__container-date{
+  width: 100%;
+  height: $heightBlock + 2px;
+  display: flex;
+}
+.search-form__label{
+  @include fontStyle($mons,bold,$fontSizeContent,$lineHeight - 15px,$darkShade); //аргументы ( $fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
+  text-transform: uppercase;
+}
+.search-form__input{
+  @include inputStyle($inputsWidthDate);  // аргументы ($width)
+  margin-top: $margin;
+  padding-left: $paddingInput;
+  @include fontStyle($mons,normal,$fontSizeContent + 2px,$lineHeight - 12px,rgba($darkShade,0.75)); //аргументы ( $fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
+  @include  backgroundArrowDawn;
+}
+.search-form__container-guests{
+  width: 100%;
+  height: $heightBlock + 5px;
+}
+.input-guest{
+  width: 100%;
+  height: $fieldsHeight;
+  margin-top: 5px;
+}
+.search-form__container-button{
+  width: 100%;
+  height: $heightBlock - 5;
+  display: flex;
+}
+.search-form__button{
+  @include buttonStyle($buttonsWidthDefault);   // аргументы ($width)
+  @include fontStyle($mons,bold,$fontSizeContent,$lineHeight - 15px,$myWhite); //аргументы ( $fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
+  text-transform: uppercase;
+  border: none;
+  align-self: flex-end;
+  padding-bottom: 10px;
+  padding-left: 17px;
+  img{
+    position: relative;
+    left: 64px;
+    top: 6px;
+  }
+}
