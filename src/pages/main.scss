@@ -8,14 +8,14 @@
 }
 body{
   background: rgba($myBlack,0.1);
-  .block-form {
-    padding-top: 150px;
-    padding-left: 140px;
-  }
 }
 .wrapper{
   width: 1440px;
   margin: 20px auto;
+  .block-form {
+    padding-top: 150px;
+    padding-left: 140px;
+  }
 }
 .wrapper-cards{
   height: 1350px;
