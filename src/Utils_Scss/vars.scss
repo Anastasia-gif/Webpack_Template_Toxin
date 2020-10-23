@@ -1,19 +1,39 @@
 @import "src/Utils_Scss/fonts";
 
-// color
-$DarkShade : #1F2041;
-$Purple    : #BC9CFF;
-$Green     : #6FCF97;
-$MyWhite   : #FFFFFF;
-$MyGrey    : #e6e6e6;
-$MyBlack   : #000000;
+$darkShade : #1F2041;
+$purple    : #BC9CFF;
+$green     : #6FCF97;
+$myWhite   : #FFFFFF;
+$myGrey    : #e6e6e6;
+$myBlack   : #000000;
+$aquaBlue    : #66D2EA;
 
 //font
-$Quick     : "Quicksand",sans-serif;
-$Mons      : "Montserrat",sans-serif;
+$quick     : "Quicksand",sans-serif;
+$mons      : "Montserrat",sans-serif;
+$lineHeight: 30px;
+$fontSizeHeader  :  24px;
+$fontSizeContent : 12px;
 
 //size
-$Column    : 70px;
-$Row       : 70px;
-$padding   : 40px;
-$margin    : 20px;
+$fieldsHeight: 44px;
+$inputsWidthDate : 150px;
+$inputsWidthDefault : 320px;
+$widthForm : 380px;
+$heightFormFindNumber : 374px;
+$heightBlock : 80px;
+$widthBlock : 320px;
+$buttonsWidthDefault : 320px;
+$margin: 6px;
+$sizeLogo: 48px;
+
+//indent
+$paddingDefault : 150px;
+$paddingInput : 15px;
+$paddingFormTop: 40px;
+$paddingFormLeft: 30px;
+$paddingLogo: 30px;
+
+//radius
+$borderRadiusDefault : 4px;
+$borderRadiusButton : 22px;
