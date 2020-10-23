@@ -1,0 +1,11 @@
+ @import "../Utils_Scss/vars";
+ @import "../Utils_Scss/mixins";
+
+.block-main-logo{
+  width: $sizeLogo;
+  height:  $sizeLogo;
+}
+ .block-main-logo__container{
+   background: url("/assets/img/LogoContainer.png") center no-repeat;
+   height: $sizeLogo;
+ }
