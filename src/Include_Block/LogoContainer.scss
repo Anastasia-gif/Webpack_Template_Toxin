@@ -2,11 +2,10 @@
  @import "../Utils_Scss/mixins";
 
 .block-main-logo{
-  width: $WidthMainLogo;
-  height:  $HeightMainLogo;
+  width: $sizeLogo;
+  height:  $sizeLogo;
 }
  .block-main-logo__container{
-   @include BackgroundImage(inherit);
-   background-image: url("/assets/img/LogoContainer.png");
-
+   background: url("/assets/img/LogoContainer.png") center no-repeat;
+   height: $sizeLogo;
  }
