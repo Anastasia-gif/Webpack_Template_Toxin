@@ -1,59 +1,59 @@
 @import "../Utils_Scss/mixins.scss";
 @import "../Utils_Scss/vars.scss";
 
-.search-form{
-  padding: $paddingFormTop $paddingFormLeft;
-}
 .search-form-find-number{
-  @include styleSearchForm($heightFormFindNumber);   // аргументы $heightForm
+ height: $heightFormFindNumber;
 }
-.search-form__header{
+.block-header-find-number{
   height: $heightBlock;
-  width: $widthBlock;
 }
-.search-form__header__h1{
-  @include fontStyle($quick,bold,$fontSizeHeader,$lineHeight,$darkShade) //аргументы ( $fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
+.label-arrival{
+  grid-area: label-arrival;
 }
-.search-form__container{
-  height: $heightBlock + 69px;
-  width: $widthBlock;
+.input-arrival{
+  grid-area: input-arrival;
+  width: $widthInputsDate;
 }
-.search-form__container-date{
-  width: 100%;
-  height: $heightBlock + 2px;
-  display: flex;
+.label-departure{
+  grid-area: label-departure;
 }
-.search-form__label{
-  @include fontStyle($mons,bold,$fontSizeContent,$lineHeight - 15px,$darkShade); //аргументы ( $fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
-  text-transform: uppercase;
+.input-departure{
+  grid-area: input-departure;
+  width: $widthInputsDate;
 }
-.search-form__input{
-  @include inputStyle($inputsWidthDate);  // аргументы ($width)
-  margin-top: $margin;
-  padding-left: $paddingInput;
-  @include fontStyle($mons,normal,$fontSizeContent + 2px,$lineHeight - 12px,rgba($darkShade,0.75)); //аргументы ( $fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
-  @include  backgroundArrowDawn;
+.label-guests{
+  grid-area: label-guests;
+}
+.input-guests{
+  grid-area: input-guests;
+  width: $widthInputsDefault;
+}
+.block-content-find-number{
+  height: (151px - $heightBlock ) + $heightBlock;
+  @include gridBlockContentForm(150px,20px,150px,15px,5px,44px,21px,15px,5px,44px);  // аргументы ($columnOne,$columnTho,$columnThree,$rowOne,$rowTho,$rowThree,$rowFour,$rowFive,$rowSix,$rowSeven)
+  grid-template-areas: "label-arrival . label-departure"
+                        ". . ."
+                        "input-arrival . input-departure"
+                        ". . ."
+                        "label-guests . ."
+                        ". . ."
+                        "input-guests input-guests input-guests";
 }
 .search-form__container-guests{
   width: 100%;
   height: $heightBlock + 5px;
 }
-.input-guest{
-  width: 100%;
-  height: $fieldsHeight;
-  margin-top: 5px;
-}
+
 .search-form__container-button{
   width: 100%;
   height: $heightBlock - 5;
-  display: flex;
+}
+.search-form__block-button{
+  position: relative;
+  top: 29px;
 }
 .search-form__button{
-  @include buttonStyle($buttonsWidthDefault);   // аргументы ($width)
-  @include fontStyle($mons,bold,$fontSizeContent,$lineHeight - 15px,$myWhite); //аргументы ( $fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
-  text-transform: uppercase;
   border: none;
-  align-self: flex-end;
   padding-bottom: 10px;
   padding-left: 17px;
   img{

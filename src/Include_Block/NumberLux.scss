@@ -2,5 +2,43 @@
 @import "../Utils_Scss/vars.scss";
 
 .search-form-number-lux{
-  @include styleSearchForm($heightFormNumberLux);
+  @include styleSearchForm();
+  height: $heightFormNumberLux;
+}
+.block-header-number-lux{
+  height: $heightBlock - 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.header-number-lux{
+  font-size: $fontSizeContent + 2px;
+  line-height: $lineHeight - 13px;
+  height: $heightBlock - 50px;
+  width: $widthForm - 210px;
+  padding-top: 7px;
+
+  & :nth-child(1){
+    font-size: $fontSizeHeader;
+  }
+  & :nth-child(2){
+    @include fontStyle($mons,bold,$fontSizeContent,$lineHeight - 15px,$purple);  //аргументы $fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor
+    text-transform: uppercase;
+    padding-right: 1px;
+  }
+}
+.paragraph-header-lux{
+  height: $heightBlock - 60px;
+  width: $widthForm - 220px;
+  p{
+    @include fontStyle($mons,bold,$fontSizeContent + 2px,$lineHeight - 12px,rgba($darkShade,0.5));  //аргументы $fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor
+    span{
+      padding-left: 5px;
+    }
+  }
+  span{
+    font-size: $fontSizeContent;
+    font-weight: normal;
+    color: rgba($darkShade,0.5);
+  }
 }

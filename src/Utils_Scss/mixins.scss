@@ -1,13 +1,17 @@
 @import "src/Utils_Scss/fonts";
 @import "src/Utils_Scss/vars";
 
-@mixin styleSearchForm($heightForm){
+@mixin styleSearchForm(){
   width: $widthForm;
-  height: $heightForm;
   border: 1px solid rgba(0,0,0,0.2);
   border-radius: $borderRadiusDefault;
   background-color: $myWhite;
   box-shadow: 0 0 25px rgba($myBlack,0.2);
+}
+@mixin gridBlockContentForm($columnOne,$columnTho,$columnThree,$rowOne,$rowTho,$rowThree,$rowFour,$rowFive,$rowSix,$rowSeven){
+  display: grid;
+  grid-template-columns: $columnOne $columnTho $columnThree;
+  grid-template-rows: $rowOne $rowTho $rowThree $rowFour $rowFive $rowSix $rowSeven;
 }
 @mixin fontStyle($fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor){
   font-family: $fontFamily;
@@ -17,9 +21,8 @@
   line-height: $lineHeight;
   color: $fontColor;
 }
-@mixin inputStyle($width){
-  width: $width;
-  height: $fieldsHeight;
+@mixin inputStyle(){
+  height: $heightFields;
   background-color: $myWhite;
   border: 1px solid rgba(31,32,65,0.25);
   border-radius: $borderRadiusDefault;
@@ -28,13 +31,13 @@
   background: linear-gradient(180deg,$purple 0,$green 100%) center ;
   border-radius: $borderRadiusButton;
   width: $width;
-  height: $fieldsHeight;
+  height: $heightFields;
 }
 @mixin backgroundArrowButton{
   background: url("/assets/img/arrow_forward_batton.png") no-repeat calc(100% - 15px) calc(100% - 22px);
-  height: $fieldsHeight;
+  height: $heightFields;
   width: 44px;
 }
 @mixin backgroundArrowDawn(){
-  background: $myWhite url("/assets/img/ArrowDaun.png") no-repeat  calc(100% - 15px) center ;
+  background: $myWhite url("/assets/img/ArrowDaun.png") no-repeat  calc(100% - 15px) calc(100% - 17px) ;
 }
