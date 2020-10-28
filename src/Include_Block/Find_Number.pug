@@ -1,14 +1,14 @@
 .block-form.form-find-number
     form.search-form.search-form-find-number
         header.search-form__block-header.block-header-find-number
-            h1.search-form__block-header__content
+            h1.search-form__block-header__content-h1
                 |Найдём номера под
                 br
                 |ваши пожелания
         .search-form__block-content.block-content-find-number
-            label.search-form__block-content__label.label-arrival(for="arrival")
+            label.search-form__block-content__label.label-arrival-find-number(for="arrival")
                 |Прибытие
-            input.search-form__block-content__input.input-arrival(
+            input.search-form__block-content__input.input-arrival-find-number(
                 type = "text"
                 placeholder = "ДД.ММ.ГГГГ"
                 id = "arrival"
@@ -16,17 +16,17 @@
                 data-multiple-dates-separator=" - "
                 name = "fieldArrival"
             )
-            label.search-form__block-content__label.label-departure(for="departure")
+            label.search-form__block-content__label.label-departure-find-number(for="departure")
                 |Выезд
-            input.search-form__block-content__input.datepicker-here.input-departure(
+            input.search-form__block-content__input.datepicker-here.input-departure-find-number(
                 type = "text"
                 placeholder = "ДД.ММ.ГГГГ"
                 id = "departure"
                 name = "fieldDeparture"
             )
-            label.search-form__block-content__label.label-guests(for="guest")
+            label.search-form__block-content__label.label-guests-find-number(for="guest")
                 |Гости
-            input.search-form__block-content__input.input-guests(
+            input.search-form__block-content__input.input-guests-find-number(
                 type = "text"
                 placeholder = "Сколько гостей"
                 id = "guest"

@@ -7,26 +7,23 @@
 .block-header-find-number{
   height: $heightBlock;
 }
-.label-arrival{
+.label-arrival-find-number{
   grid-area: label-arrival;
 }
-.input-arrival{
+.input-arrival-find-number{
   grid-area: input-arrival;
-  width: $widthInputsDate;
 }
-.label-departure{
+.label-departure-find-number{
   grid-area: label-departure;
 }
-.input-departure{
+.input-departure-find-number{
   grid-area: input-departure;
-  width: $widthInputsDate;
 }
-.label-guests{
+.label-guests-find-number{
   grid-area: label-guests;
 }
-.input-guests{
+.input-guests-find-number{
   grid-area: input-guests;
-  width: $widthInputsDefault;
 }
 .block-content-find-number{
   height: (151px - $heightBlock ) + $heightBlock;

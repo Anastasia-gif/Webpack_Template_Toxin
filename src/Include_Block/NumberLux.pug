@@ -1,44 +1,65 @@
 .block-form.block-number-lux
     form.search-form.search-form-number-lux
         header.search-form__block-header.block-header-number-lux
-            h1.search-form__header__h1.header-number-lux
-                |№
-                span 888
-                span Люкс
-            .searh-form__header__block-paragraph.paragraph-header-lux
-                p
+                h3.search-form__block-header__content-h3.header-h3-number-lux
+                    |№
+                h1.search-form__block-header__content-h1.header-span-number
+                    |888
+                h3.search-form__block-header__content-h3.header-h3-lux
+                    |Люкс
+                p.search-form__block-header__paragraph.header-number-paragraph
                     | 9 990₽
-                    span в сутки
-        main.search-form__container
-            section.search-form__container-date
-                label.search-form__label
-                    |Прибытие
-                    input.search-form__input.datepicker-here(
-                        type = "text"
-                        placeholder = "ДД.ММ.ГГГГ"
-                        id = "arrivalLux"
-                        data-range = "true"
-                        data-multiple-dates-separator=" - "
-                        name = "fieldArrival"
-                    )
-                label.search-form__label
-                    |Выезд
-                    input.search-form__input.datepicker-here(
-                        type = "text"
-                        placeholder = "ДД.ММ.ГГГГ"
-                        id = "departureLux"
-                        name = "fieldDeparture"
-                    )
-            section.search-form__container-guests
-                label.search-form__label
-                    |Гости
-                    input.search-form__input.input-guest(
-                        type = "text"
-                        placeholder = "Сколько гостей"
-                        id = "guest"
-                        name = "fieldGuests"
-                    )
-        .search-form__container-button
+                p.search-form__block-header__paragraph.header-paragraph-day
+                    |в сутки
+        .search-form__block-content.block-content-number-lux
+            label.search-form__block-content__label.label-arrival-lux(for="departureLux")
+                |Прибытие
+            input.search-form__block-content__input.datepicker-here.input-arrival-lux(
+                type = "text"
+                placeholder = "ДД.ММ.ГГГГ"
+                id = "arrivalLux"
+                data-range = "true"
+                data-multiple-dates-separator=" - "
+                name = "fieldArrival"
+            )
+            label.search-form__block-content__label.label-departure-lux(for="departureLux")
+                |Выезд
+            input.search-form__block-content__input.input-departure-lux(
+                type = "text"
+                placeholder = "ДД.ММ.ГГГГ"
+                id = "departureLux"
+                name = "fieldDeparture"
+            )
+            label.search-form__block-content__label.label-guests-lux(for="guestLux")
+                |Гости
+            input.search-form__block-content__input.input-guest.input-guests-lux(
+                    type = "text"
+                    placeholder = "Сколько гостей"
+                    id = "guestLux"
+                    name = "fieldGuests"
+            )
+        .search-form__block-content-servise
+            .search-form__block-content-servise__price.amount-four-days
+                | 9 990₽ x 4 суток
+            .search-form__block-content-servise__price.total-four-days
+                | 39 960₽
+            .search-form__block-content-servise__price.service-charge
+                | Сбор за услуги: скидка 2 179₽
+            .search-form__block-content-servise__charge-image.service-charge-image
+            .search-form__block-content-servise__price.total-service-charge
+                | 0₽
+            .search-form__block-content-servise__price.fee-additional-services
+                | Сбор за дополнительные услуги
+            .search-form__block-content-servise__charge-image.fee-additional-services-image
+            .search-form__block-content-servise__price.total-fee-additional-services
+                | 300₽
+        .search-form__block-content-total
+            .search-form__block-content-total__sum.text-total
+                | Итого
+            .search-form__block-content-total__border.border-total
+            .search-form__block-content-total__sum.total-sum
+                | 38 081₽
+        .search-form__container-button.container-button-number-lux
             button.search-form__button
-                span Подобрать номер
+                span Забронировать
                 img(src="/assets/img/arrow_forward_batton.png")
