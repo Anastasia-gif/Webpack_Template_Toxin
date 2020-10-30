@@ -20,10 +20,19 @@ body{
   background-color: rgba($myWhite,0.6);
   .block-form{
     padding-top:  120px;
+  }
+  .form-find-number{
     padding-left: 110px;
+  }
+  .block-number-lux{
+    padding-left: 40px;
+  }
+  .form-registration-accaunt{
+    padding-left: 40px;
   }
 }
 @import "../Include_Block/LogoContainer";
 @import "../Include_Block/generalStaleForms";
 @import "../Include_Block/Find_Number";
 @import "../Include_Block/NumberLux";
+@import "../Include_Block/RegistrationAccaunter.";
