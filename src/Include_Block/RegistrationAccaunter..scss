@@ -1,0 +1,136 @@
+@import "../Utils_Scss/mixins.scss";
+@import "../Utils_Scss/vars.scss";
+
+.block-header-registration-accaunt{
+  height: $heightBlock - 50px;
+}
+.search-form-registration-accaunt{
+  height: $heightFormRegistration;
+}
+.input-name-registration-accaunt{
+  width: $widthInputsDefault;
+  position: relative;
+  top: 20px;
+}
+.input-family-registration-accaunt{
+  width: $widthInputsDefault;
+  position: relative;
+  top: 30px;
+}
+.search-form__block-content__radio-batton-male{
+  grid-area: radio-batton-male;
+  align-self: center;
+  justify-self: center;
+}
+.search-form__block-content__gender-male{
+  grid-area: gender-male;
+}
+.search-form__block-content__gender-women{
+  grid-area:  gender-women;
+}
+.search-form__block-content__radio-batton-women{
+  grid-area: radio-batton-women;
+  align-self: center;
+  justify-self: center;
+}
+.search-form__block-content__gender-selection{
+  position: relative;
+  top: 30px;
+  display: grid;
+  grid-template-columns: 20px 10px 68px 20px 20px 10px 73px;
+  grid-template-rows: 8px 24px;
+  grid-template-areas: ". . . . . . . "
+                       "radio-batton-male . gender-male . radio-batton-women . gender-women";
+}
+.search-form__block-content__birthday{
+  position: relative;
+  top: 52px;
+  display: grid;
+  grid-template-columns: 320px;
+  grid-row-gap: 5px;
+  grid-template-rows: 15px 44px;
+}
+.field-style-text{
+  @include fontStyle( $mons,normal,$fontSizeContent + 2px,$lineHeight - 6px,rgba($darkShade,0.5)) //аргументы ($fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
+}
+.label-birthday{
+  width: 118px;
+}
+.label-data-for-service{
+  grid-area: label-data-for-service;
+}
+.input-email-registration-accaunt{
+  grid-area: input-email-data-for-service;
+}
+.input-password-registration-accaunt{
+  grid-area: input-password-data-for-service;
+}
+.search-form__block-content__data-for-service
+{
+  position: relative;
+  top: 72px;
+  display: grid;
+  grid-template-columns: 320px;
+  grid-template-rows: 15px 5px 44px 10px 44px;
+  grid-template-areas: "label-data-for-service"
+                       "."
+                       "input-email-data-for-service"
+                       "."
+                       "input-password-data-for-service";
+}
+.search-form__block-content__checkbox-special-offers
+{
+  position: relative;
+  top: 81px;
+  display: grid;
+  grid-template-columns: 40px 210px;
+  grid-column-gap: 10px;
+  grid-template-rows: 24px;
+}
+.container-checkbox{
+  border-radius: 10px;
+  width: 40px;
+  height: 20px;
+}
+.checkbox{
+  border-radius: 10px;
+  position: relative;
+  top: -13px;
+  left: 6px;
+}
+.search-form__block-content__paragraph-checkbox{
+ @include  fontStyle($mons,normal,$fontSizeContent + 2px,$lineHeight - 6px,rgba($darkShade,0.75) );  //аргументы ($fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
+  margin-top: -2px;
+}
+.block-batton-registration-accaunter{
+  position: relative;
+  top: 102px;
+}
+.search-form__block-content__already-have-account{
+  position: relative;
+  top: 131px;
+  display: grid;
+  grid-template-columns: 186px 99px;
+  grid-column-gap: 35px;
+  grid-template-rows: 44px;
+}
+.search-form__block-content__already-have-account__text{
+  @include  fontStyle($mons,normal,$fontSizeContent + 2px,$lineHeight - 12px,$myBlack );  //аргументы ($fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
+  align-self: center;
+}
+.button-already-have-account{
+  width: 99px;
+  button{
+    background: $myWhite;
+    width: 95px;
+    height: 42px;
+    border-radius: 22px;
+    position: relative;
+    right: 15px;
+    top: 1px;
+    border: none;
+    @include fontStyle($mons,bold,$fontSizeContent,$lineHeight - 15px,$myWhite); //аргументы ( $fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
+    text-transform: uppercase;
+    color: $purple;
+  }
+}

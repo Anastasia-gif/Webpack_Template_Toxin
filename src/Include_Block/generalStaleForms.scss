@@ -1,0 +1,51 @@
+@import "../Utils_Scss/mixins.scss";
+@import "../Utils_Scss/vars.scss";
+
+.search-form{
+  padding: $paddingFormTop $paddingFormLeft - 1px;
+  @include styleSearchForm();
+}
+.search-form__block-header{
+  width: $widthBlockForm;
+}
+.search-form__block-header__content-h1{
+  @include fontStyle($quick,bold,$fontSizeHeader,$lineHeight,$darkShade) //аргументы ( $fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
+}
+.search-form__block-header__content-h3{
+  @include fontStyle($mons,bold,$fontSizeContent,$lineHeight - 15px,$purple); //аргументы ($fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
+  text-transform: uppercase;
+}
+.search-form__block-header__paragraph{
+  @include fontStyle($mons,bold,$fontSizeContent + 2px,$lineHeight - 12px,rgba($darkShade,0.5)); //аргументы ($fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
+
+}
+.search-form__block-content {
+  width: 100%;
+}
+.search-form__block-content__input{
+  @include inputStyle();
+  padding-left: $paddingInput;
+  @include  backgroundArrowDawn;
+  @include fontStyle( $mons,normal,$fontSizeContent + 2px,$lineHeight - 12px,rgba($darkShade,0.75)) //аргументы ($fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
+}
+.search-form__block-content__label{
+  @include fontStyle( $mons,bold,$fontSizeContent,$lineHeight - 15px,$darkShade); //аргументы ($fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
+  text-transform: uppercase;
+}
+.search-form__button{
+  @include buttonStyle($widthButtonsDefault);   //атрибуты ($width)
+  @include fontStyle($mons,bold,$fontSizeContent,$lineHeight - 15px,$myWhite); //аргументы ( $fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
+  text-transform: uppercase;
+}
+.search-form__block-content-servise__price{
+  @include fontStyle( $mons,normal,$fontSizeContent + 2px,$lineHeight - 6px,rgba($darkShade,0.75)) //аргументы ($fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
+}
+.search-form__block-content-servise__charge-image{
+  background-image:url("/assets/img/imageServise.png");
+  background-position: center;
+  width: 20px;
+  background-repeat: no-repeat;
+}
+.search-form__block-content-total__sum{
+  @include fontStyle($quick,bold,$fontSizeContent + 7px,$lineHeight - 6px,$darkShade); //аргументы ( $fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
+}

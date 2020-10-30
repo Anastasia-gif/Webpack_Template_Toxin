@@ -1,0 +1,70 @@
+.block-form.form-registration-accaunt
+    form.search-form.search-form-registration-accaunt
+        header.search-form__block-header.block-header-registration-accaunt
+            h1.search-form__block-header__content-h1
+                | Регистрация аккаунта
+            .search-form__block-content.block-content-registretion-accaunt
+                input.search-form__block-content__input.input-name-registration-accaunt(
+                    type="text"
+                    name = "fieldName"
+                    placeholder="Имя"
+                )
+                input.search-form__block-content__input.input-family-registration-accaunt(
+                    type="text"
+                    name = "fieldFamily"
+                    placeholder="Фамилия"
+                )
+                .search-form__block-content__gender-selection
+                    label.search-form__block-content__gender-male.field-style-text(for="radioGenderMale")
+                        | Мужчина
+                    input.search-form__block-content__radio-batton-male(
+                        id="radioGenderMale"
+                        type="radio"
+                    )
+                    label.search-form__block-content__gender-women.field-style-text(for="radioGenderWomen")
+                        | Женщина
+                    input.search-form__block-content__radio-batton-women(
+                        id="radioGenderWomen"
+                        type="radio"
+                    )
+                .search-form__block-content__birthday
+                    label.search-form__block-content__label.label-birthday(for="fieldDateBirth")
+                        | дата рождения
+                    input.search-form__block-content__input.input-birthday(
+                        type="text"
+                        id="fieldDateBirth"
+                        name = "fieldDateBirth"
+                        placeholder="ДД.ММ.ГГГГ"
+                    )
+                .search-form__block-content__data-for-service
+                    label.search-form__block-content__label.label-data-for-service
+                        | данные для входа в сервис
+                    input.search-form__block-content__input.input-email-registration-accaunt(
+                        type="email"
+                        id="fieldEmail"
+                        name = "fieldEmail"
+                        placeholder="Email"
+                    )
+                    input.search-form__block-content__input.input-password-registration-accaunt(
+                        type="password"
+                        id="fieldPassword"
+                        name = "fieldPassword"
+                        placeholder="Пароль"
+                    )
+                .search-form__block-content__checkbox-special-offers
+                    .search-form__block-content__input.container-checkbox
+                        input.search-form__block-content__input.checkbox(
+                            type="radio"
+                        )
+                    p.search-form__block-content__paragraph-checkbox
+                         | Получать спецпредложения
+
+                .search-form__block-button.block-batton-registration-accaunter
+                    button.search-form__button
+                        span Перейти к оплате
+                        img(src="/assets/img/arrow_forward_batton.png")
+                .search-form__block-content__already-have-account
+                    p.search-form__block-content__already-have-account__text
+                        | Уже есть аккаунт на Toxin
+                    .search-form__button.button-already-have-account
+                        button Войти
