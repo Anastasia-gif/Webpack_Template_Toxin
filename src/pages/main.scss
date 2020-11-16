@@ -12,14 +12,19 @@ body{
 .wrapper{
   width: 1440px;
   margin: 20px auto;
-  padding: 30px;
-  display: flex;
 }
 .wrapper-cards{
   height: 1350px;
   background-color: rgba($myWhite,0.6);
-  .block-form{
-    padding-top:  120px;
+  display: flex;
+  >*:nth-child(2) {
+    margin-top: 140px;
+  }
+  >*:nth-child(3) {
+    margin-top: 140px;
+  }
+ >*:nth-child(4) {
+    margin-top: 140px;
   }
   .form-find-number{
     padding-left: 110px;
@@ -27,8 +32,24 @@ body{
   .block-number-lux{
     padding-left: 40px;
   }
-  .form-registration-accaunt{
+  .form-registration-account{
     padding-left: 40px;
+  }
+  .form-enter-account{
+    position: relative;
+    top: 543px;
+    left: -1220px;
+  }
+}
+
+.wrapper-header-footer{
+  background-color: rgba($myWhite, 0.6);
+  height: 1350px;
+  >*:nth-child(2) {
+    margin-top: 140px;
+  }
+  >*:nth-child(3) {
+    margin-top: 20px;
   }
 }
 @import "../Include_Block/LogoContainer";
@@ -36,3 +57,6 @@ body{
 @import "../Include_Block/Find_Number";
 @import "../Include_Block/NumberLux";
 @import "../Include_Block/RegistrationAccaunter.";
+@import "../Include_Block/EnterAccaunt";
+@import "../Include_Block/HeaderHotel";
+@import "../Include_Block/RegisteredUsersHeaderHotel";

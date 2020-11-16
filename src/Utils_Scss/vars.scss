@@ -8,42 +8,73 @@ $myWhite              : #FFFFFF;
 $myGrey               : #e6e6e6;
 $myBlack              : #000000;
 $aquaBlue             : #66D2EA;
+$blue                  : #8BA4F9;
 
 //font
 $quick                : "Quicksand",sans-serif;
 $mons                 : "Montserrat",sans-serif;
-$lineHeight           : 30px;
-$fontSizeHeader       : 24px;
+$lineHeightH1         : 30px;
+$lineHeightH2         : 24px;
+$lineHeightH3         : 15px;
+$lineHeightBody       : 24px;
+$fontSizeH1           : 24px;
+$fontSizeH2           : 19px;
+$fontSizeH3           : 12px;
+$fontSizeBody         : 14px;
+
 $fontSizeContent      : 12px;
 
 //size
-$widthInputsDefault   : 320px;
 $sizeLogo             : 48px;
+$sizeImageService     : 20px;
+$sizeHeaderHotelLogo  : 40px;
 
 //width
+$widthContainer       : 1440px;
+$widthFieldDefault    : 320px;
 $widthForm            : 380px;
-$widthBlockForm       : 320px;
-$widthButtonsDefault  : 320px;
 $widthInputsDate      : 150px;
 $widthBlockTotal      : 59px;
+$widthFieldCheckbox   : 40px;
+$widthGenderSelection : 20px;
+$widthAlreadyHaveAccount : 186px;
+$widthButtonHeader : 87px;
 
 //height
-$heightFormFindNumber : 374px;
-$heightFormNumberLux  : 511px;
+$heightFormFindNumber   : 374px;
+$heightFormNumberLux    : 511px;
 $heightFormRegistration : 646px;
-$heightBlock          : 80px;
-$heightFields         : 44px;
-$heightBlockContent   : 151px;
-$heightBlockTotal     : 24px;
+$heightFormEnterAccount : 358px;
+$heightBlockHeader      : 30px;
+$heightFields           : 44px;
+$heightLabel            : 15px;
+$heightBlockTotal       : 24px;
+$heightFieldCheckbox    : 20px;
+$heightGenderSelection  : 24px;
+$heightAlreadyHaveAccount : 42px;
+$heightButtonHeader : 34px;
+
+
+
+
 
 //indent
-$paddingDefault       : 150px;
 $paddingInput         : 15px;
+$paddingButton        : 10px;
 $paddingFormTop       : 40px;
 $paddingFormLeft      : 30px;
+$paddingLeftBlocksForm: 140px;
+$paddingTopBlocksForm : 150px;
+$gridGap              : 10px;
+
 $paddingLogo          : 30px;
 $margin               : 6px;
 
 //radius
 $borderRadiusDefault  : 4px;
 $borderRadiusButton   : 22px;
+
+//position relative
+$top                  : 20px;
+$left                 : 106px;
+$right                : 15px;

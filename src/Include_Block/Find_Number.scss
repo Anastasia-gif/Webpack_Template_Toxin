@@ -1,11 +1,14 @@
 @import "../Utils_Scss/mixins.scss";
 @import "../Utils_Scss/vars.scss";
 
+.form-find-number{
+  height: $heightFormFindNumber;
+}
 .search-form-find-number{
- height: $heightFormFindNumber;
+ height: 100%;
 }
 .block-header-find-number{
-  height: $heightBlock;
+  height: $heightBlockHeader + 30px;
 }
 .label-arrival-find-number{
   grid-area: label-arrival;
@@ -26,8 +29,9 @@
   grid-area: input-guests;
 }
 .block-content-find-number{
-  height: (151px - $heightBlock ) + $heightBlock;
-  @include gridBlockContentForm(150px,20px,150px,15px,5px,44px,21px,15px,5px,44px);  // аргументы ($columnOne,$columnTho,$columnThree,$rowOne,$rowTho,$rowThree,$rowFour,$rowFive,$rowSix,$rowSeven)
+  position: relative;
+  top: $top;
+  @include gridBlockContentForm($widthInputsDate,$gridGap + 10px,$widthInputsDate,$heightLabel,$gridGap - 5px,$heightFields,$gridGap + 11px,$heightLabel,$gridGap - 5px,$heightFields);  // аргументы ($columnOne,$columnTho,$columnThree,$rowOne,$rowTho,$rowThree,$rowFour,$rowFive,$rowSix,$rowSeven)
   grid-template-areas: "label-arrival . label-departure"
                         ". . ."
                         "input-arrival . input-departure"
@@ -36,26 +40,12 @@
                         ". . ."
                         "input-guests input-guests input-guests";
 }
-.search-form__container-guests{
-  width: 100%;
-  height: $heightBlock + 5px;
-}
-
 .search-form__container-button{
-  width: 100%;
-  height: $heightBlock - 5;
+  width: $widthFieldDefault;
+  height: $heightFields;
 }
 .search-form__block-button{
   position: relative;
-  top: 29px;
+  top: $top + 31px;
 }
-.search-form__button{
-  border: none;
-  padding-bottom: 10px;
-  padding-left: 17px;
-  img{
-    position: relative;
-    left: 64px;
-    top: 6px;
-  }
-}
+

@@ -1,0 +1,35 @@
+@import "../Utils_Scss/mixins.scss";
+@import "../Utils_Scss/vars.scss";
+
+.form-enter-account{
+  height: $heightFormEnterAccount;
+}
+.search-form-enter-account{
+  height: 100%;
+}
+.block-header-enter-account{
+  height: $heightBlockHeader;
+}
+.block-content-enter-account{
+  position: relative;
+  top: $top;
+  display: grid;
+  grid-template-columns: $widthFieldDefault;
+  grid-template-rows: repeat(2,$heightFields);
+  grid-row-gap: $gridGap;
+}
+.block-button-enter-account{
+  position: relative;
+  top: $top + 20px;
+  left: $left - 105px;
+}
+.button-enter-account{
+  img{
+    position: relative;
+    left: $left;
+  }
+}
+.already-have-account-enter{
+  position: relative;
+  top: (68px - $top) + $top;
+}

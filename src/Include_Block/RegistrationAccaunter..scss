@@ -1,21 +1,24 @@
 @import "../Utils_Scss/mixins.scss";
 @import "../Utils_Scss/vars.scss";
 
-.block-header-registration-accaunt{
-  height: $heightBlock - 50px;
+.form-registration-account{
+  height: $heightFormRegistration
 }
-.search-form-registration-accaunt{
-  height: $heightFormRegistration;
+.search-form-registration-account{
+  height: 100%;
 }
-.input-name-registration-accaunt{
-  width: $widthInputsDefault;
+.block-header-registration-account{
+  height: $heightBlockHeader;
+}
+.input-name-registration-account{
+  width: $widthFieldDefault;
   position: relative;
-  top: 20px;
+  top: $top;
 }
-.input-family-registration-accaunt{
-  width: $widthInputsDefault;
+.input-family-registration-account{
+  width: $widthFieldDefault;
   position: relative;
-  top: 30px;
+  top: $top + 10px;
 }
 .search-form__block-content__radio-batton-male{
   grid-area: radio-batton-male;
@@ -35,101 +38,99 @@
 }
 .search-form__block-content__gender-selection{
   position: relative;
-  top: 30px;
+  top: $top + 10px;
   display: grid;
-  grid-template-columns: 20px 10px 68px 20px 20px 10px 73px;
-  grid-template-rows: 8px 24px;
+  grid-template-columns: $widthGenderSelection $gridGap (68px - $widthGenderSelection) + $widthGenderSelection $gridGap + 10px $widthGenderSelection $gridGap (73px - $widthGenderSelection) + $widthGenderSelection;
+  grid-template-rows: $gridGap - 2px $heightGenderSelection;
   grid-template-areas: ". . . . . . . "
                        "radio-batton-male . gender-male . radio-batton-women . gender-women";
 }
 .search-form__block-content__birthday{
   position: relative;
-  top: 52px;
+  top: (52px - $top) + $top;
   display: grid;
-  grid-template-columns: 320px;
-  grid-row-gap: 5px;
-  grid-template-rows: 15px 44px;
+  grid-template-columns: $widthFieldDefault;
+  grid-row-gap: $gridGap - 5px;
+  grid-template-rows: $heightLabel $heightFields;
 }
 .field-style-text{
-  @include fontStyle( $mons,normal,$fontSizeContent + 2px,$lineHeight - 6px,rgba($darkShade,0.5)) //аргументы ($fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
-}
-.label-birthday{
-  width: 118px;
+  @include fontStyle( $mons,normal,$fontSizeBody,$lineHeightBody,rgba($darkShade,0.5)) //аргументы ($fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
 }
 .label-data-for-service{
   grid-area: label-data-for-service;
 }
-.input-email-registration-accaunt{
+.input-email-registration-account{
   grid-area: input-email-data-for-service;
 }
-.input-password-registration-accaunt{
+.input-password-registration-account{
   grid-area: input-password-data-for-service;
 }
 .search-form__block-content__data-for-service
 {
   position: relative;
-  top: 72px;
+  top: (72px - $top) + $top;
   display: grid;
-  grid-template-columns: 320px;
-  grid-template-rows: 15px 5px 44px 10px 44px;
+  grid-template-columns: $widthFieldDefault;
+  grid-template-rows: $heightLabel $gridGap - 5px $heightFields $gridGap $heightFields;
   grid-template-areas: "label-data-for-service"
                        "."
                        "input-email-data-for-service"
                        "."
                        "input-password-data-for-service";
 }
-.search-form__block-content__checkbox-special-offers
-{
+.search-form__block-content__checkbox-special-offers{
   position: relative;
-  top: 81px;
+  top: (81px - $top) + $top;
   display: grid;
-  grid-template-columns: 40px 210px;
-  grid-column-gap: 10px;
-  grid-template-rows: 24px;
+  grid-template-columns: $widthFieldCheckbox (210px - $widthFieldCheckbox) + $widthFieldCheckbox;
+  grid-column-gap: $gridGap;
+  grid-template-rows: $heightFieldCheckbox + 4px;
 }
 .container-checkbox{
-  border-radius: 10px;
-  width: 40px;
-  height: 20px;
+  border-radius: (10px - $borderRadiusDefault) + $borderRadiusDefault ;
+  height: $heightFieldCheckbox;
+  background-image: none;
 }
 .checkbox{
-  border-radius: 10px;
+  border-radius: (10px - $borderRadiusDefault) + $borderRadiusDefault ;
   position: relative;
-  top: -13px;
-  left: 6px;
+  top: $top - ($top + 13px);
+  left:$left - ($left - 6px);
 }
 .search-form__block-content__paragraph-checkbox{
- @include  fontStyle($mons,normal,$fontSizeContent + 2px,$lineHeight - 6px,rgba($darkShade,0.75) );  //аргументы ($fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
-  margin-top: -2px;
+ @include  fontStyle($mons,normal,$fontSizeBody,$lineHeightBody,rgba($darkShade,0.75) );  //аргументы ($fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
+  margin-top: $margin - (2px + $margin);
 }
-.block-batton-registration-accaunter{
+.block-batton-registration-account{
   position: relative;
-  top: 102px;
+  top: (102px - $top) + $top;
+}
+.already-have-account-registration{
+  position: relative;
+  top: (131px - $top) + $top;
 }
 .search-form__block-content__already-have-account{
-  position: relative;
-  top: 131px;
   display: grid;
-  grid-template-columns: 186px 99px;
-  grid-column-gap: 35px;
-  grid-template-rows: 44px;
+  grid-template-columns: $widthAlreadyHaveAccount $widthAlreadyHaveAccount - ($widthAlreadyHaveAccount - 99px);
+  grid-column-gap: (35px - $gridGap) + $gridGap;
+  grid-template-rows: $heightFields;
 }
 .search-form__block-content__already-have-account__text{
-  @include  fontStyle($mons,normal,$fontSizeContent + 2px,$lineHeight - 12px,$myBlack );  //аргументы ($fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
+  @include  fontStyle($mons,normal,$fontSizeBody,$lineHeightBody - 6px,$myBlack );  //аргументы ($fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
   align-self: center;
 }
 .button-already-have-account{
-  width: 99px;
+  width: $widthAlreadyHaveAccount - ( $widthAlreadyHaveAccount - 99px);
   button{
     background: $myWhite;
-    width: 95px;
-    height: 42px;
-    border-radius: 22px;
+    width: $widthAlreadyHaveAccount - ($widthAlreadyHaveAccount - 95px);
+    height: $heightAlreadyHaveAccount;
+    border-radius: $borderRadiusButton;
     position: relative;
-    right: 15px;
-    top: 1px;
+    right: $right;
+    top:$top - ( $top - 1px);
     border: none;
-    @include fontStyle($mons,bold,$fontSizeContent,$lineHeight - 15px,$myWhite); //аргументы ( $fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
+    @include fontStyle($mons,bold,$fontSizeBody,$lineHeightBody,$myWhite); //аргументы ( $fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
     text-transform: uppercase;
     color: $purple;
   }

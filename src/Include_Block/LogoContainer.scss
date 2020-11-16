@@ -2,8 +2,10 @@
  @import "../Utils_Scss/mixins";
 
 .block-main-logo{
-  width: $sizeLogo;
-  height:  $sizeLogo;
+  width: $sizeLogo + 30px;
+  height:  $sizeLogo + 30px;
+  padding-top: 30px;
+  padding-left: 30px;
 }
  .block-main-logo__container{
    background: url("/assets/img/LogoContainer.png") center no-repeat;

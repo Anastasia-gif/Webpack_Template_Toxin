@@ -1,0 +1,113 @@
+@import "../Utils_Scss/mixins";
+@import "../Utils_Scss/vars";
+
+.wrapper-header-toxin{
+  width: $widthContainer;
+  height: 70px;
+  background-color: $myWhite;
+  box-shadow: 0 10px 20px rgba($darkShade,0.5);
+  padding: 0 139px;
+}
+.header-toxin{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.header-toxin__wrapper{
+  width: 114px;
+  display: flex;
+  align-items: center
+}
+.header-toxin__logo{
+  background: url("/assets/img/headerToxin.png");
+  width: $sizeHeaderHotelLogo;
+  height: $sizeHeaderHotelLogo;
+}
+.header-toxin__logo-text{
+  color: $darkShade;
+  margin-left: 14px;
+}
+.header-toxin__nav {
+  width: 467px;
+  height: 18px;
+  margin-left: 276px;
+}
+.header-toxin__nav-ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  height: 18px;
+  display: flex;
+  li{
+    margin-right: 20px;
+  }
+}
+.header-toxin-ul__background{
+  background-image: url("/assets/img/ArrowDaun.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 21px;
+  width: 24px;
+  border: none;
+}
+li{
+  a{
+    text-decoration: none;
+    display: block;
+    @include fontStyle($mons,normal,$fontSizeBody,$lineHeightBody -($lineHeightBody - 17px),rgba($darkShade,0.5));   //аргументы $fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor
+    &:hover{
+      font-weight: bold;
+      color: rgba($darkShade,0.75);
+      cursor: pointer;
+    }
+  }
+}
+.header-toxin__nav-ul__list{
+  width: 74px;
+  display: flex;
+}
+.list-agreement{
+  width: 116px;
+}
+.header-toxin__wrapper-button{
+  width: 303px;
+  display: flex;
+}
+.header-toxin__button{
+  height: $heightButtonHeader;
+  border-radius: $borderRadiusButton;
+  background: linear-gradient(180deg,$purple 0%,$blue 100%);
+  border: none;
+  button{
+    @include fontStyle($mons,bold,$fontSizeH3,$lineHeightH3,$purple);   //аргументы $fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor
+    text-transform: uppercase;
+    width: $widthButtonHeader - 4px;
+    height: $heightButtonHeader - 4px;
+    border-radius: $borderRadiusButton;
+    background-color:$myWhite;
+    border: none;
+  }
+}
+
+.header-toxin-button-create{
+  width: $widthButtonHeader;
+  padding: 2px;
+  margin-right: 20px;
+}
+.header-toxin-button-registration{
+  @include fontStyle($mons,bold,$fontSizeH3,$lineHeightH3,$myWhite);   //аргументы $fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor
+  text-transform: uppercase;
+  width: $widthButtonHeader + 109px;
+}
+.registered-user-nav{
+  margin-left: 460px;
+}
+.header-toxin__empty-div{
+  width: 1px;
+  height: 30px;
+  background: rgba($darkShade,0.1);
+}
+.header-toxin__user-name{
+  @include fontStyle($mons,normal,$fontSizeBody,$lineHeightBody -($lineHeightBody - 17px),rgba($darkShade,0.5));   //аргументы $fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor
+  margin-left: 19px;
+}

@@ -1,15 +1,18 @@
 @import "../Utils_Scss/mixins.scss";
 @import "../Utils_Scss/vars.scss";
 
+.block-number-lux{
+  height: $heightFormNumberLux
+}
 .search-form-number-lux{
   @include styleSearchForm();
-  height: $heightFormNumberLux;
+  height: 100%;
 }
 .header-h3-number-lux{
   grid-area: header-h3-number-lux;
   align-self: center;
-  font-size: $fontSizeContent + 2px;
-  line-height: $lineHeight - 15px;
+  font-size: $fontSizeBody;
+  line-height: $lineHeightBody - 7px;
   color: $darkShade;
 }
 .header-span-number{
@@ -26,12 +29,13 @@
 .header-paragraph-day{
   grid-area: header-span-day;
   font-weight: normal;
-  font-size: $fontSizeContent;
+  font-size: $fontSizeBody;
+  line-height: $lineHeightBody - 7px;
   align-self: center;
 }
 .block-header-number-lux{
-  height: $heightBlock - 30px;
-  width: 100%;
+  height: $heightBlockHeader - 10px;
+  width: $widthForm;
   display: grid;
   grid-template-columns: 14px 8px 43px 5px 41px 109px 52px 3px 46px;
   grid-template-rows: 38px 9px;
@@ -57,7 +61,7 @@
 }
 .fee-additional-services{
   grid-area: fee-additional-services;
-  line-height: $lineHeight - 12px;
+  line-height: $lineHeightBody - 6px;
 }
 .fee-additional-services-image{
   grid-area: fee-additional-services-image;
@@ -68,6 +72,8 @@
   justify-self: end;
 }
 .search-form__block-content-servise{
+  position: relative;
+  top: $top + 11px;
   display: grid;
   grid-template-columns: 214px 5px 20px 23px 57px;
   grid-template-rows: 16px 24px 10px 24px 10px 36px;
@@ -97,8 +103,9 @@
   grid-area: input-guests;
 }
 .block-content-number-lux{
-  height: (151px - $heightBlock ) + $heightBlock;
-  @include gridBlockContentForm(150px,20px,150px,15px,5px,44px,21px,15px,5px,44px);  // аргументы ($columnOne,$columnTho,$columnThree,$rowOne,$rowTho,$rowThree,$rowFour,$rowFive,$rowSix,$rowSeven)
+  position: relative;
+  top: $top + 10px;
+  @include gridBlockContentForm($widthInputsDate,$gridGap + 10px,$widthInputsDate,$heightLabel,$gridGap - 5px,$heightFields,$gridGap + 11px,$heightLabel,$gridGap - 5px,$heightFields);  // аргументы ($columnOne,$columnTho,$columnThree,$rowOne,$rowTho,$rowThree,$rowFour,$rowFive,$rowSix,$rowSeven)
   grid-template-areas: "label-arrival . label-departure"
                         ". . ."
                         "input-arrival . input-departure"
@@ -122,11 +129,16 @@
 }
 .search-form__block-content-total{
   position: relative;
-  top: 32px;
-  left: 2px;
+  top: (64px - $top) + $top;
+  left: $left - ($left - 2px) ;
   display: flex;
 }
 .container-button-number-lux{
   position: relative;
-  top: 52px;
+  top: (85px - $top) + $top;
+}
+.button-number-lux{
+  img {
+    left: $left - 34px;
+  }
 }
