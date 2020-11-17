@@ -6,6 +6,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+button:active,button:focus,input:active,input:focus{
+  outline: none;
+}
 body{
   background: rgba($myBlack,0.1);
 }
@@ -50,6 +53,11 @@ body{
   }
   >*:nth-child(3) {
     margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  >*:nth-child(5) {
+    margin: 40px auto 0 auto;
+
   }
 }
 @import "../Include_Block/LogoContainer";
@@ -60,3 +68,5 @@ body{
 @import "../Include_Block/EnterAccaunt";
 @import "../Include_Block/HeaderHotel";
 @import "../Include_Block/RegisteredUsersHeaderHotel";
+@import "../Include_Block/FooterHotelToxin";
+
