@@ -4,8 +4,14 @@
             h1.search-form__block-header__content-h1
                 | Войти
         .search-form__block-content.block-content-enter-account
-            input.search-form__block-content__input
-            input.search-form__block-content__input
+            input.search-form__block-content__input.field-users-profile(
+                type = "text"
+                placeholder = "Email"
+            )
+            input.search-form__block-content__input.field-users-profile(
+                type = "password"
+                placeholder = "Пароль"
+            )
         .search-form__block-button.block-button-enter-account
             button.search-form__button.button-enter-account
                 span Войти

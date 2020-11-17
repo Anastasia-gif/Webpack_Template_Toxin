@@ -1,0 +1,120 @@
+@import "../Utils_Scss/vars";
+@import "../Utils_Scss/mixins";
+
+.wrapper-footer-hotel{
+  width: $widthContainer;
+  height: $heightBlockFooter;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wrapper-footer-hotel__main-block{
+  width: 100%;
+  height: $heightBlockFooter - ($heightBlockFooter - 372px);
+  background: $myWhite;
+  box-shadow: 0 1px 0 rgba($darkShade,0.1);
+}
+.wrapper-footer-hotel__block{
+  width: 100%;
+  height: $heightBlockFooter -($heightBlockFooter - 70px);
+  background-color: $myWhite;
+  box-shadow: 0 10px 20px rgba($darkShade,0.05);
+}
+.padding-footer{
+  padding: 0 140px;
+}
+.wrapper-footer-hotel__main-block__container{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.wrapper-footer-hotel__main-block__container__logo{
+  width: 300px;
+  height: 168px;
+}
+.wrapper-footer-hotel__main-block__ul{
+  width: 200px;
+  height: 168px;
+  list-style: none;
+  li{
+    margin-bottom: 20px;
+  }
+  & a:last-child{
+    margin-bottom: 21px;
+  }
+}
+.wrapper-footer-hotel__main-block__name-menu{
+  margin-bottom: 17px;
+  a{
+    text-decoration: none;
+    @include fontStyle($mons, bold, $fontSizeBody, $lineHeightBody, $darkShade); //аргументы $fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor
+
+  }
+}
+.wrapper-footer-hotel__paragraph{
+  @include fontStyle($mons, normal, $fontSizeBody, $lineHeightBody, rgba($darkShade,0.75)); //аргументы $fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor
+}
+.subscription{
+  height: 36px;
+}
+.wrapper-footer-hotel__main-block__container__subscription{
+  height: 168px;
+}
+.main-block-subscription-text{
+  height: 72px;
+}
+.main-block-logo-text{
+  margin-top: 20px;
+}
+.wrapper-footer-hotel__main-block__container__subscription-field{
+  @include inputStyle();
+  width: 260px;
+  padding-left: 15px;
+  @include fontStyle($mons, normal, $fontSizeBody, $lineHeightBody, rgba($darkShade,0.25)); //аргументы $fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor
+  background: url("/assets/img/arrowForvardFooter.png") no-repeat calc(100% - 15px) calc(100% - 12px);
+}
+.wrapper-footer-hotel__block{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper-footer-hotel__block-social-media-icons{
+  width: 112px;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 17px;
+  &>*{
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .wrapper-footer-hotel__block-social-media-icons__twitter{
+    background-image: url("/assets/img/twiter.png");
+  }
+  .wrapper-footer-hotel__block-social-media-icons__facebook{
+    background-image: url("/assets/img/facebook.png");
+  }
+  .wrapper-footer-hotel__block-social-media-icons__instagram{
+    background-image: url("/assets/img/insta.png");
+  }
+}
+.container-header-footer{
+  width: 768px;
+  height: 367px;
+  background: $myWhite;
+  box-shadow: 0 10px 20px rgba($darkShade,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &>*:first-child{
+    margin-bottom: 20px;
+  }
+  &>*:nth-child(2){
+    margin-bottom: 25px;
+  }
+}
