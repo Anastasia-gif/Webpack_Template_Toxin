@@ -1,0 +1,106 @@
+@import "../Utils_Scss/mixins.scss";
+@import "../Utils_Scss/vars.scss";
+
+.block-registration-account{
+  height: $heightFormRegistration
+}
+.search-form-registration-account{
+  height: 100%;
+}
+.block-name-family{
+  position: relative;
+  top: $positionTopBlockNameFam;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(2,$heightFields);
+  grid-row-gap: $gridGapUserDataBlock;
+}
+.radio-button-male{
+  grid-area: radio-batton-male;
+  align-self: center;
+  justify-self: center;
+}
+.label-radio-button-male{
+  grid-area: gender-male;
+}
+.label-radio-button-women{
+  grid-area:  gender-women;
+}
+.radio-button-women{
+  grid-area: radio-batton-women;
+  align-self: center;
+  justify-self: center;
+}
+.block-gender-selection{
+  position: relative;
+  top: $positionTopGenderSelection;
+  display: grid;
+  grid-template-columns: $sizeGenderRadioButton $gridGapFieldGenderSelection - ($gridGapFieldGenderSelection - 9px) $widthSelectionGender $sizeGenderRadioButton $gridGapFieldGenderSelection $gridGapFieldGenderSelection - ($gridGapFieldGenderSelection - 9px) $widthSelectionGender - ($widthSelectionGender - 73px);
+  grid-template-rows:  $heightGenderSelection;
+  grid-template-areas: ". . . . . . . "
+                       "radio-batton-male . gender-male . radio-batton-women . gender-women";
+}
+.block-birthday{
+  position: relative;
+  top: $positionBlockBirthday;
+  display: grid;
+  grid-template-columns: $widthInput;
+  grid-row-gap:$gridGapBlockBirthday;
+  grid-template-rows: $heightLabel $heightFields;
+}
+.field-style-text{
+  @include fontStyle( $mons,normal,$fontSizeBody,$lineHeightBody,rgba($darkShade,0.5)) //аргументы ($fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor)
+}
+.label-data-for-service{
+  grid-area: label-data-for-service;
+}
+.input-email-registration-account{
+  grid-area: input-email-data-for-service;
+}
+.input-password-registration-account{
+  grid-area: input-password-data-for-service;
+}
+.block-data-for-service
+{
+  position: relative;
+  top: $positionTopBlockDataService;
+  display: grid;
+  grid-template-columns: $widthInput;
+  grid-template-rows: $heightLabel $gridGapUserDataBlock - ($gridGapUserDataBlock  - 5px) $heightFields $gridGapUserDataBlock  $heightFields;
+  grid-template-areas: "label-data-for-service"
+                       "."
+                       "input-email-data-for-service"
+                       "."
+                       "input-password-data-for-service";
+}
+.block-checkbox-special-offers{
+  position: relative;
+  top: $positionTopBlockCheckbox ;
+  display: grid;
+  grid-template-columns: $widthFieldCheckbox (210px - $widthFieldCheckbox) + $widthFieldCheckbox;
+  grid-column-gap: $gridGapCheckbox ;
+  grid-template-rows: $heightFieldCheckbox + 4px;
+}
+.container-checkbox{
+  border-radius: (10px - $borderRadiusDefault) + $borderRadiusDefault ;
+  height: $heightFieldCheckbox;
+  background-image: none;
+}
+.checkbox{
+  border-radius: (10px - $borderRadiusDefault) + $borderRadiusDefault;
+  position: relative;
+  top: 1px;
+  left: $positionLeftBlockCheckbox;
+}
+.paragraph-checkbox{
+  margin-top: $marginCheckboxParagraph ;
+}
+.block-submit-payment{
+  position: relative;
+  top: $positionTopSubmitPayment;
+}
+.position-have-account-registration{
+  position: relative;
+  top: $positionTopAlreadyHaveAccount;
+}
+

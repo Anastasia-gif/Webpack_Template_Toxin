@@ -1,70 +1,74 @@
-.block-form.form-registration-account
-    form.search-form.search-form-registration-account
-        header.search-form__block-header.block-header-registration-account
+.block-form.block-registration-account
+    form.search-form.search-form-registration-account(
+        action = " "
+        method = "post"
+    )
+        header.search-form__block-header
             h1.search-form__block-header__content-h1
                 | Регистрация аккаунта
-            .search-form__block-content.block-content-registretion-account
-                input.search-form__block-content__input.input-name-registration-account(
-                    type="text"
-                    name = "fieldName"
-                    placeholder="Имя"
+        .search-form__block-name-famile.block-name-family
+            input.search-form__block-content__input.input-name-registration-account(
+                type="text"
+                name = "fieldName"
+                placeholder="Имя"
+            )
+            input.search-form__block-content__input.input-family-registration-account(
+                type="text"
+                name = "fieldFamily"
+                placeholder="Фамилия"
+            )
+        .search-form__block-gender-selection.block-gender-selection
+            label.search-form__block-gender-selection__male.field-style-text.label-radio-button-male(for="radioGenderMale")
+                | Мужчина
+            input.search-form__block-gender-selection__radio-button-male.radio-button-male(
+                id="radioGenderMale"
+                type="radio"
+            )
+            label.search-form__block-gender-selection__women.field-style-text.label-radio-button-women(for="radioGenderWomen")
+                | Женщина
+            input.search-form__block-gender-selection__radio-button-women.radio-button-women(
+                id="radioGenderWomen"
+                type="radio"
+            )
+        .search-form__block-content.block-birthday
+            label.search-form__block-content__label.label-birthday(for="fieldDateBirth")
+                | дата рождения
+            input.search-form__block-content__input.input-birthday(
+                type="text"
+                id="fieldDateBirth"
+                name = "fieldDateBirth"
+                placeholder="ДД.ММ.ГГГГ"
+            )
+        .search-form__block-content.block-data-for-service
+            label.search-form__block-content__label.label-data-for-service
+                | данные для входа в сервис
+            input.search-form__block-content__input.input-email-registration-account(
+                type="email"
+                id="fieldEmail"
+                name = "fieldEmail"
+                placeholder="Email"
+            )
+            input.search-form__block-content__input.input-password-registration-account(
+                type="password"
+                id="fieldPassword"
+                name = "fieldPassword"
+                placeholder="Пароль"
+            )
+        .search-form__block-content.block-checkbox-special-offers
+            .search-form__block-content__input.container-checkbox
+                input.search-form__block-content__input__content.checkbox(
+                    type="radio"
                 )
-                input.search-form__block-content__input.input-family-registration-account(
-                    type="text"
-                    name = "fieldFamily"
-                    placeholder="Фамилия"
-                )
-                .search-form__block-content__gender-selection
-                    label.search-form__block-content__gender-male.field-style-text(for="radioGenderMale")
-                        | Мужчина
-                    input.search-form__block-content__radio-batton-male(
-                        id="radioGenderMale"
-                        type="radio"
-                    )
-                    label.search-form__block-content__gender-women.field-style-text(for="radioGenderWomen")
-                        | Женщина
-                    input.search-form__block-content__radio-batton-women(
-                        id="radioGenderWomen"
-                        type="radio"
-                    )
-                .search-form__block-content__birthday
-                    label.search-form__block-content__label.label-birthday(for="fieldDateBirth")
-                        | дата рождения
-                    input.search-form__block-content__input.input-birthday(
-                        type="text"
-                        id="fieldDateBirth"
-                        name = "fieldDateBirth"
-                        placeholder="ДД.ММ.ГГГГ"
-                    )
-                .search-form__block-content__data-for-service
-                    label.search-form__block-content__label.label-data-for-service
-                        | данные для входа в сервис
-                    input.search-form__block-content__input.input-email-registration-account(
-                        type="email"
-                        id="fieldEmail"
-                        name = "fieldEmail"
-                        placeholder="Email"
-                    )
-                    input.search-form__block-content__input.input-password-registration-account(
-                        type="password"
-                        id="fieldPassword"
-                        name = "fieldPassword"
-                        placeholder="Пароль"
-                    )
-                .search-form__block-content__checkbox-special-offers
-                    .search-form__block-content__input.container-checkbox
-                        input.search-form__block-content__input.checkbox(
-                            type="radio"
-                        )
-                    p.search-form__block-content__paragraph-checkbox
-                         | Получать спецпредложения
-
-                .search-form__block-button.block-batton-registration-account
-                    button.search-form__button.button-registration
-                        span Перейти к оплате1
-                        img(src="/assets/img/arrow_forward_batton.png")
-                .search-form__block-content__already-have-account.already-have-account-registration
-                    p.search-form__block-content__already-have-account__text
-                        | Уже есть аккаунт на Toxin
-                    .search-form__button.button-already-have-account
-                        button Войти
+            p.search-form__block-content__paragraph.paragraph-checkbox
+                | Получать спецпредложения
+        .search-form__submit.block-submit-payment
+            input.search-form__submit__input(
+                type = "submit"
+                value = "Перейти к оплате"
+            )
+            div.search-form__submit__block-arrow-background
+        .search-form__block-content.already-have-account.position-have-account-registration
+            p.search-form__block-content__paragraph.already-have-account-paragraph
+                | Уже есть аккаунт на Toxin
+            .search-form__button.button-already-have-account
+                button Войти

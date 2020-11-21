@@ -1,17 +1,12 @@
 @import "src/Utils_Scss/fonts";
 @import "src/Utils_Scss/vars";
 
-@mixin styleSearchForm(){
+@mixin searchFormStyle(){
   width: $widthForm;
   border: 1px solid rgba(0,0,0,0.2);
   border-radius: $borderRadiusDefault;
   background-color: $myWhite;
   box-shadow: 0 0 25px rgba($myBlack,0.2);
-}
-@mixin gridBlockContentForm($columnOne,$columnTho,$columnThree,$rowOne,$rowTho,$rowThree,$rowFour,$rowFive,$rowSix,$rowSeven){
-  display: grid;
-  grid-template-columns: $columnOne $columnTho $columnThree;
-  grid-template-rows: $rowOne $rowTho $rowThree $rowFour $rowFive $rowSix $rowSeven;
 }
 @mixin fontStyle($fontFamily,$fontWeight,$fontSize,$lineHeight,$fontColor){
   font-family: $fontFamily;
@@ -27,9 +22,10 @@
   border: 1px solid rgba(31,32,65,0.25);
   border-radius: $borderRadiusDefault;
 }
-@mixin buttonStyle($width){
+@mixin submitStyle($width){
   background: linear-gradient(180deg,$purple 0,$green 100%) center ;
   border-radius: $borderRadiusButton;
+  border: none;
   width: $width;
   height: $heightFields;
 }
@@ -40,4 +36,20 @@
 }
 @mixin backgroundArrowDawn(){
   background: $myWhite url("/assets/img/ArrowDaun.png") no-repeat  calc(100% - 15px) calc(100% - 17px) ;
+}
+@mixin backgroundButton(){
+  background: linear-gradient(180deg,$purple 0%, $blue 100%);
+  border-radius: $borderRadiusButton;
+  @include fontStyle($mons,bold,$fontSizeH3,$lineHeightH3,$myWhite);
+  border: none;
+  text-transform: uppercase;
+  button{
+    background-color: $myWhite;
+    width:  $widthAlreadyHaveAccount - ($widthAlreadyHaveAccount - 95px);
+    height:  $heightAlreadyHaveAccount;
+    border-radius: $borderRadiusButton;
+    @include fontStyle($mons,bold,$fontSizeH3,$lineHeightH3,$purple);
+    border: none;
+    margin: 2px 2px;
+  }
 }

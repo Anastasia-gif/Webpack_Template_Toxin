@@ -1,7 +1,7 @@
 @import "../Utils_Scss/mixins.scss";
 @import "../Utils_Scss/vars.scss";
 
-.form-find-number{
+.block-find-number{
   height: $heightFormFindNumber;
 }
 .search-form-find-number{
@@ -30,8 +30,10 @@
 }
 .block-content-find-number{
   position: relative;
-  top: $top;
-  @include gridBlockContentForm($widthInputsDate,$gridGap + 10px,$widthInputsDate,$heightLabel,$gridGap - 5px,$heightFields,$gridGap + 11px,$heightLabel,$gridGap - 5px,$heightFields);  // аргументы ($columnOne,$columnTho,$columnThree,$rowOne,$rowTho,$rowThree,$rowFour,$rowFive,$rowSix,$rowSeven)
+  top: $positionTopBlockDates;
+  display: grid;
+  grid-template-columns: $widthInputsDate $gridGapDate $widthInputsDate;
+  grid-template-rows: $heightLabel $gridGapDate - ($gridGapDate - 5px) $heightFields $gridGapDate $heightLabel$gridGapDate - ($gridGapDate - 5px) $heightFields;
   grid-template-areas: "label-arrival . label-departure"
                         ". . ."
                         "input-arrival . input-departure"
@@ -40,12 +42,8 @@
                         ". . ."
                         "input-guests input-guests input-guests";
 }
-.search-form__container-button{
-  width: $widthFieldDefault;
-  height: $heightFields;
-}
-.search-form__block-button{
+.block-submit-pick-up-room{
   position: relative;
-  top: $top + 31px;
+  top: $positionTopSubmit - ($positionTopSubmit - 52px);
 }
 

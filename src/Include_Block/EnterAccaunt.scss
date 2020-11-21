@@ -1,7 +1,7 @@
 @import "../Utils_Scss/mixins.scss";
 @import "../Utils_Scss/vars.scss";
 
-.form-enter-account{
+.block-enter-account{
   height: $heightFormEnterAccount;
 }
 .search-form-enter-account{
@@ -12,27 +12,17 @@
 }
 .block-content-enter-account{
   position: relative;
-  top: $top;
+  top: $positionTopBlockEnterAccount;
   display: grid;
-  grid-template-columns: $widthFieldDefault;
+  grid-template-columns: $widthInput;
   grid-template-rows: repeat(2,$heightFields);
-  grid-row-gap: $gridGap;
+  grid-row-gap: $gridGapUserDataBlock;
 }
-.block-button-enter-account{
+.position-submit-account-enter{
   position: relative;
-  top: $top + 20px;
-  left: $left - 105px;
+  top: 40px;
 }
-.button-enter-account{
-  img{
-    position: relative;
-    left: $left;
-  }
-}
-.already-have-account-enter{
+.position-have-account-enter{
   position: relative;
-  top: (68px - $top) + $top;
-}
-.field-users-profile{
-  color: rgba($darkShade,0.25);
+  top: 26px;
 }

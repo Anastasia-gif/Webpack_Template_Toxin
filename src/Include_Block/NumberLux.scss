@@ -5,7 +5,6 @@
   height: $heightFormNumberLux
 }
 .search-form-number-lux{
-  @include styleSearchForm();
   height: 100%;
 }
 .header-h3-number-lux{
@@ -29,18 +28,48 @@
 .header-paragraph-day{
   grid-area: header-span-day;
   font-weight: normal;
-  font-size: $fontSizeBody;
+  font-size: $fontSizeBody - 2px;
   line-height: $lineHeightBody - 7px;
   align-self: center;
 }
 .block-header-number-lux{
-  height: $heightBlockHeader - 10px;
-  width: $widthForm;
   display: grid;
   grid-template-columns: 14px 8px 43px 5px 41px 109px 52px 3px 46px;
-  grid-template-rows: 38px 9px;
+  grid-template-rows: 37px;
   grid-template-areas: "header-h3-number-lux . header-span-number . header-h3-lux . header-h1-number-paragraph . header-span-day"
                        ". . . . . . . . .";
+}
+.label-arrival-lux{
+  grid-area: label-arrival;
+}
+.input-arrival-lux{
+  grid-area: input-arrival;
+}
+.label-departure-lux{
+  grid-area: label-departure;
+}
+.input-departure-lux{
+  grid-area: input-departure;
+}
+.label-guests-lux{
+  grid-area: label-guests;
+}
+.input-guests-lux{
+  grid-area: input-guests;
+}
+.block-content-number-lux{
+  position: relative;
+  top: $positionTopBlockDates;
+  display: grid;
+  grid-template-columns: $widthInputsDate $gridGapDate $widthInputsDate;
+  grid-template-rows:$heightLabel $gridGapDate - ($gridGapDate - 5px) $heightFields $gridGapDate $heightLabel $gridGapDate - ($gridGapDate - 5px) $heightFields;
+  grid-template-areas: "label-arrival . label-departure"
+                        ". . ."
+                        "input-arrival . input-departure"
+                        ". . ."
+                        "label-guests . ."
+                        ". . ."
+                        "input-guests input-guests input-guests";
 }
 .amount-four-days{
   grid-area: amount-four-days;
@@ -71,9 +100,9 @@
   grid-area: total-fee-additional-services;
   justify-self: end;
 }
-.search-form__block-content-servise{
+.block-content-service{
   position: relative;
-  top: $top + 11px;
+  top:$positionTopBlockService;
   display: grid;
   grid-template-columns: 214px 5px 20px 23px 57px;
   grid-template-rows: 16px 24px 10px 24px 10px 36px;
@@ -84,61 +113,26 @@
                        ". . . . . "
                        "fee-additional-services . fee-additional-services-image . total-fee-additional-services";
 }
-.label-arrival-lux{
-  grid-area: label-arrival;
-}
-.input-arrival-lux{
-  grid-area: input-arrival;
-}
-.label-departure-lux{
-  grid-area: label-departure;
-}
-.input-departure-lux{
-  grid-area: input-departure;
-}
-.label-guests-lux{
-  grid-area: label-guests;
-}
-.input-guests-lux{
-  grid-area: input-guests;
-}
-.block-content-number-lux{
-  position: relative;
-  top: $top + 10px;
-  @include gridBlockContentForm($widthInputsDate,$gridGap + 10px,$widthInputsDate,$heightLabel,$gridGap - 5px,$heightFields,$gridGap + 11px,$heightLabel,$gridGap - 5px,$heightFields);  // аргументы ($columnOne,$columnTho,$columnThree,$rowOne,$rowTho,$rowThree,$rowFour,$rowFive,$rowSix,$rowSeven)
-  grid-template-areas: "label-arrival . label-departure"
-                        ". . ."
-                        "input-arrival . input-departure"
-                        ". . ."
-                        "label-guests . ."
-                        ". . ."
-                        "input-guests input-guests input-guests";
-}
-.text-total{
+.total-text{
   width: $widthBlockTotal;
   height: $heightBlockTotal;
 }
 .total-sum{
   width: $widthBlockTotal + 9px;
-  height: $heightBlockTotal ;
+  height: $heightBlockTotal;
 }
 .border-total{
   width: (192px - $widthBlockTotal )+$widthBlockTotal;
   height: $heightBlockTotal - 4px;
   border-bottom: 1px dashed rgba($darkShade,0.25);
 }
-.search-form__block-content-total{
+.block-content-total{
   position: relative;
-  top: (64px - $top) + $top;
-  left: $left - ($left - 2px) ;
+  top: $positionTopBlockTotal;
+  left: $positionLeftBlockTotal ;
   display: flex;
 }
-.container-button-number-lux{
+.block-submit-to-book{
   position: relative;
-  top: (85px - $top) + $top;
-}
-.button-number-lux{
-  img {
-    left: $left - 34px;
-  }
+  top: $positionTopSubmit;
 }

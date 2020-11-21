@@ -1,5 +1,8 @@
-.block-form.form-find-number
-    form.search-form.search-form-find-number
+.block-form.block-find-number
+    form.search-form.search-form-find-number(
+        action = " "
+        method = "post"
+    )
         header.search-form__block-header.block-header-find-number
             h1.search-form__block-header__content-h1
                 |Найдём номера под
@@ -12,8 +15,6 @@
                 type = "text"
                 placeholder = "ДД.ММ.ГГГГ"
                 id = "arrival"
-                data-range = "true"
-                data-multiple-dates-separator=" - "
                 name = "fieldArrival"
             )
             label.search-form__block-content__label.label-departure-find-number(for="departure")
@@ -32,9 +33,12 @@
                 id = "guest"
                 name = "fieldGuests"
             )
-        .search-form__block-button
-            button.search-form__button
-                span Подобрать номер
-                img(src="/assets/img/arrow_forward_batton.png")
+        .search-form__submit.block-submit-pick-up-room
+            input.search-form__submit__input(
+                type = "submit"
+                value = "Подобрать номер"
+            )
+            div.search-form__submit__block-arrow-background
+
 
 

@@ -1,81 +1,97 @@
 @import "src/Utils_Scss/fonts";
 
 //color
-$darkShade            : #1F2041;
-$purple               : #BC9CFF;
-$green                : #6FCF97;
-$myWhite              : #FFFFFF;
-$myGrey               : #e6e6e6;
-$myBlack              : #000000;
-$aquaBlue             : #66D2EA;
-$blue                  : #8BA4F9;
+$darkShade                       : #1F2041;
+$purple                          : #BC9CFF;
+$green                           : #6FCF97;
+$myWhite                         : #FFFFFF;
+$myGrey                          : #e6e6e6;
+$myBlack                         : #000000;
+$aquaBlue                        : #66D2EA;
+$blue                            : #8BA4F9;
 
 //font
-$quick                : "Quicksand",sans-serif;
-$mons                 : "Montserrat",sans-serif;
-$lineHeightH1         : 30px;
-$lineHeightH2         : 24px;
-$lineHeightH3         : 15px;
-$lineHeightBody       : 24px;
-$fontSizeH1           : 24px;
-$fontSizeH2           : 19px;
-$fontSizeH3           : 12px;
-$fontSizeBody         : 14px;
-
-$fontSizeContent      : 12px;
+$quick                           : "Quicksand",sans-serif;
+$mons                            : "Montserrat",sans-serif;
+$fontSizeH1                      : 24px;
+$lineHeightH1                    : 30px;
+$fontSizeBody                    : 14px;
+$lineHeightBody                  : 24px;
+$lineHeightH2                    : 24px;
+$lineHeightH3                    : 15px;
+$fontSizeH2                      : 19px;
+$fontSizeH3                      : 12px;
 
 //size
-$sizeLogo             : 48px;
-$sizeImageService     : 20px;
-$sizeHeaderHotelLogo  : 40px;
+$sizeLogo                        : 48px;
+$sizeImageService                : 20px;
+$sizeHeaderHotelLogo             : 40px;
+$sizeGenderRadioButton           : 20px;
 
 //width
-$widthContainer       : 1440px;
-$widthFieldDefault    : 320px;
-$widthForm            : 380px;
-$widthInputsDate      : 150px;
-$widthBlockTotal      : 59px;
-$widthFieldCheckbox   : 40px;
-$widthGenderSelection : 20px;
-$widthAlreadyHaveAccount : 186px;
-$widthButtonHeader : 87px;
+$widthInput                      : 320px;
+$widthInputsDate                 : 150px;
+$widthSelectionGender            : 68px;
+$widthContainer                  : 1440px;
+$widthForm                       : 380px;
+$widthBlockTotal                 : 59px;
+$widthFieldCheckbox              : 40px;
+$widthAlreadyHaveAccount         : 186px;
+$widthBlockLogotypeHeader        : 114px;
+$widthNavMenuHeader              : 467px;
+
+$widthButtonHeader               : 87px;
 
 //height
-$heightFormFindNumber   : 374px;
-$heightFormNumberLux    : 511px;
-$heightFormRegistration : 646px;
-$heightFormEnterAccount : 358px;
-$heightBlockHeader      : 30px;
-$heightFields           : 44px;
-$heightLabel            : 15px;
-$heightBlockTotal       : 24px;
-$heightFieldCheckbox    : 20px;
-$heightGenderSelection  : 24px;
-$heightAlreadyHaveAccount : 42px;
-$heightButtonHeader      : 34px;
-$heightBlockFooter       : 443px;
+$heightFields                    : 44px;
+$heightFormNumberLux             : 511px;
+$heightFormFindNumber            : 374px;
+$heightFormRegistration          : 646px;
+$heightFormEnterAccount          : 358px;
+$heightBlockHeader               : 30px;
+$heightLabel                     : 15px;
+$heightBlockTotal                : 24px;
+$heightGenderSelection           : 24px;
+$heightFieldCheckbox             : 20px;
+$heightAlreadyHaveAccount        : 40px;
+$heightContainerHeader           : 70px;
+$heightNavMenuHeader             : 18px;
 
-
-
-
+$heightButtonHeader              : 34px;
+$heightBlockFooter               : 443px;
 
 //indent
-$paddingInput         : 15px;
-$paddingButton        : 10px;
-$paddingFormTop       : 40px;
-$paddingFormLeft      : 30px;
-$paddingLeftBlocksForm: 140px;
-$paddingTopBlocksForm : 150px;
-$gridGap              : 10px;
-
-$paddingLogo          : 30px;
-$margin               : 6px;
+$paddingTopForm                  : 40px;
+$paddingLeftForm                 : 29px;
+$paddingInput                    : 15px;
+$paddingContainerHeader          : 139px;
+$gridGapDate                     : 20px;
+$gridGapFieldGenderSelection     : 21px;
+$gridGapBlockBirthday            : 5px;
+$gridGapCheckbox                 : 10px;
+$gridGapAlreadyHaveAccount       : 35px;
+$gridGabBlockContentEnterAccount : 10px;
+$gridGapUserDataBlock            : 10px;
+$marginCheckboxParagraph         : -2px;
+$marginHeaderHotel               : 14px;
+$marginNavMenuHeader             : 276px;
 
 //radius
-$borderRadiusDefault  : 4px;
-$borderRadiusButton   : 22px;
+$borderRadiusDefault             : 4px;
+$borderRadiusButton              : 22px;
 
 //position relative
-$top                  : 20px;
-$left                 : 106px;
-$right                : 15px;
+$positionTopSubmit               : 75px;
+$positionTopBlockTotal           : 55px;
+$positionLeftBlockTotal          : 2px;
+$positionTopBlockDates           : 20px;
+$positionTopBlockService         : 23px;
+$positionTopBlockNameFam         : 20px;
+$positionTopGenderSelection      : 3px;
+$positionBlockBirthday           : 26px;
+$positionTopBlockDataService     : 46px;
+$positionTopBlockCheckbox        : 56px;
+$positionLeftBlockCheckbox       : 6px;
+$positionTopSubmitPayment        : 76px;
+$positionTopAlreadyHaveAccount   : 62px;
+$positionTopBlockEnterAccount    : 20px;

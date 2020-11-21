@@ -29,16 +29,16 @@ body{
  >*:nth-child(4) {
     margin-top: 140px;
   }
-  .form-find-number{
+  .Block-find-number{
     padding-left: 110px;
   }
   .block-number-lux{
     padding-left: 40px;
   }
-  .form-registration-account{
+  .block-registration-account{
     padding-left: 40px;
   }
-  .form-enter-account{
+  .block-enter-account{
     position: relative;
     top: 543px;
     left: -1220px;
@@ -67,7 +67,7 @@ body{
 @import "../Include_Block/generalStaleForms";
 @import "../Include_Block/Find_Number";
 @import "../Include_Block/NumberLux";
-@import "../Include_Block/RegistrationAccaunter.";
+@import "../Include_Block/RegistrationAccaunter";
 @import "../Include_Block/EnterAccaunt";
 @import "../Include_Block/HeaderHotel";
 @import "../Include_Block/RegisteredUsersHeaderHotel";

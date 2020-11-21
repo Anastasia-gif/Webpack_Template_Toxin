@@ -1,12 +1,12 @@
 @import "../Utils_Scss/mixins";
 @import "../Utils_Scss/vars";
 
-.wrapper-header-toxin{
+.container-header-toxin{
   width: $widthContainer;
-  height: 70px;
+  height: $heightContainerHeader;
   background-color: $myWhite;
   box-shadow: 0 10px 20px rgba($darkShade,0.5);
-  padding: 0 139px;
+  padding: 0 $paddingContainerHeader ;
 }
 .header-toxin{
   height: 100%;
@@ -14,7 +14,7 @@
   align-items: center;
 }
 .header-toxin__wrapper{
-  width: 114px;
+  width: $widthBlockLogotypeHeader ;
   display: flex;
   align-items: center
 }
@@ -25,29 +25,29 @@
 }
 .header-toxin__logo-text{
   color: $darkShade;
-  margin-left: 14px;
+  margin-left: $marginHeaderHotel  ;
 }
 .header-toxin__nav {
-  width: 467px;
-  height: 18px;
-  margin-left: 276px;
+  width: $widthNavMenuHeader ;
+  height: $heightNavMenuHeader ;
+  margin-left: $marginNavMenuHeader ;
 }
 .header-toxin__nav-ul {
   list-style: none;
   margin: 0;
   padding-left: 0;
-  height: 18px;
+  height: $heightNavMenuHeader;
   display: flex;
   li{
-    margin-right: 20px;
+    margin-right:$marginNavMenuHeader - ( $marginNavMenuHeader - 20px);
   }
 }
 .header-toxin-ul__background{
   background-image: url("/assets/img/ArrowDaun.png");
   background-repeat: no-repeat;
   background-position: center;
-  height: 21px;
-  width: 24px;
+  height:(21px - $heightNavMenuHeader) + $heightNavMenuHeader  ;
+  width:  $widthNavMenuHeader - ($widthNavMenuHeader - 24px);
   border: none;
 }
 li{
@@ -63,7 +63,7 @@ li{
   }
 }
 .header-toxin__nav-ul__list{
-  width: 74px;
+  width: $widthNavMenuHeader - ($widthNavMenuHeader - 74px);
   display: flex;
 }
 .list-agreement{

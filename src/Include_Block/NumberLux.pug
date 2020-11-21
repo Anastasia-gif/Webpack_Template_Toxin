@@ -1,5 +1,8 @@
 .block-form.block-number-lux
-    form.search-form.search-form-number-lux
+    form.search-form.search-form-number-lux(
+        action = " "
+        method = "post"
+    )
         header.search-form__block-header.block-header-number-lux
                 h3.search-form__block-header__content-h3.header-h3-number-lux
                     |№
@@ -38,28 +41,30 @@
                     id = "guestLux"
                     name = "fieldGuests"
             )
-        .search-form__block-content-servise
-            .search-form__block-content-servise__price.amount-four-days
+        .search-form__block-content.block-content-service
+            p.search-form__block-content__paragraph.amount-four-days
                 | 9 990₽ x 4 суток
-            .search-form__block-content-servise__price.total-four-days
+            p.search-form__block-content__paragraph.total-four-days
                 | 39 960₽
-            .search-form__block-content-servise__price.service-charge
+            p.search-form__block-content__paragraph.service-charge
                 | Сбор за услуги: скидка 2 179₽
-            .search-form__block-content-servise__charge-image.service-charge-image
-            .search-form__block-content-servise__price.total-service-charge
+            .search-form__block-content-service__charge-image.service-charge-image
+            p.search-form__block-content__paragraph.total-service-charge
                 | 0₽
-            .search-form__block-content-servise__price.fee-additional-services
+            p.search-form__block-content__paragraph.fee-additional-services
                 | Сбор за дополнительные услуги
-            .search-form__block-content-servise__charge-image.fee-additional-services-image
-            .search-form__block-content-servise__price.total-fee-additional-services
+            .search-form__block-content-service__charge-image.fee-additional-services-image
+            p.search-form__block-content__paragraph.total-fee-additional-services
                 | 300₽
-        .search-form__block-content-total
-            .search-form__block-content-total__sum.text-total
+        .search-form__block-content.block-content-total
+            .search-form__block-content__h3.total-text
                 | Итого
             .search-form__block-content-total__border.border-total
-            .search-form__block-content-total__sum.total-sum
+            .search-form__block-content__h3.total-sum
                 | 38 081₽
-        .search-form__container-button.container-button-number-lux
-            button.search-form__button.button-number-lux
-                span Забронировать
-                img(src="/assets/img/arrow_forward_batton.png")
+        .search-form__submit.block-submit-to-book
+            input.search-form__submit__input(
+                type = "submit"
+                value = "Забронировать"
+            )
+            div.search-form__submit__block-arrow-background
